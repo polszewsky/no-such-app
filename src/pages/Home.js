@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <div>
       Home
-      <p>Counter: {value ?? 0}</p>
+      {/* <p>Counter: {value ?? 0}</p>
       <p>
         <Button variant="contained" onClick={() => dispatch(increment())}>
           +1
@@ -18,7 +18,7 @@ export default function Home() {
         <Button variant="contained" onClick={() => dispatch(decrement())}>
           -1
         </Button>
-      </p>
+      </p> */}
     </div>
   );
 }
