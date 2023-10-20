@@ -27,7 +27,7 @@ export default function AddTravelPage() {
         <DirectionsCarIcon sx={{ mr: 1, my: 0.5 }} />
         <TextField
           variant="standard"
-          label="Typ pojazdu"
+          label="Vehicle type"
           style={{ marginRight: 5 }}
           startIcon={<DirectionsCarIcon />}
         />
@@ -41,7 +41,7 @@ export default function AddTravelPage() {
         <GarageIcon sx={{ mr: 1, my: 0.5 }} />
         <TextField
           variant="standard"
-          label="Twoje pojazdy"
+          label="Your vehicles"
           style={{ marginRight: 5 }}
         />
       </Grid>
@@ -54,7 +54,7 @@ export default function AddTravelPage() {
         <GarageIcon sx={{ mr: 1, my: 0.5 }} />
         <TextField
           variant="standard"
-          label="Średnie spalanie"
+          label="Average fuel conumption"
           style={{ marginRight: 5 }}
         />
       </Grid>
@@ -67,7 +67,7 @@ export default function AddTravelPage() {
         <StartIcon sx={{ mr: 1, my: 0.5 }} />
         <TextField
           variant="standard"
-          label="Lokacja startowa"
+          label="Starting location"
           style={{ marginRight: 5 }}
         />
       </Grid>
@@ -80,7 +80,7 @@ export default function AddTravelPage() {
         <SportsScoreIcon sx={{ mr: 1, my: 0.5 }} />
         <TextField
           variant="standard"
-          label="Lokacja końcowa"
+          label="Destination"
           style={{ marginRight: 5 }}
         />
       </Grid>
