@@ -13,12 +13,13 @@ import {
   Favorite,
   Restore,
   Reviews,
-  StackedBarChart,
+  StackedBarChart
 } from "@mui/icons-material";
 import TravelRoutrer from "./pages/travel/TravelRouter";
 import RewardsRouter from "./pages/rewards/RewardsRouter";
 import CommunityRouter from "./pages/community/CommunityRouter";
 import StatisticRouter from "./pages/statistics/StatisticRouter";
+import AddTravelRouter from "./pages/addTravel/AddTravelRouter";
 
 /**
  * This should be our main page where we login and create router for whole app
@@ -42,6 +43,9 @@ export default function App() {
         <Route path="/travel">
           <TravelRoutrer />
         </Route>
+        <Route path="/addTravel">
+          <AddTravelRouter />
+        </Route>
         <Route path="/">
           <Home />
         </Route>
@@ -57,40 +61,24 @@ export default function App() {
             setValue(newValue);
           }}
         >
-          <BottomNavigationAction
-            component={Link}
-            to="/"
-            label="Home"
-            icon={<Restore />}
-          />
-
-          <BottomNavigationAction
-            component={Link}
-            to="/statistic"
-            label="Statistic"
-            icon={<StackedBarChart />}
-          />
-
-          <BottomNavigationAction
-            component={Link}
-            to="/travel"
-            label="Favorites"
-            icon={<Favorite />}
-          />
-
-          <BottomNavigationAction
-            component={Link}
-            to="/community"
-            label="Archive"
-            icon={<Archive />}
-          />
-
-          <BottomNavigationAction
-            component={Link}
-            to="/rewards"
-            label="Rewards"
-            icon={<Reviews />}
-          />
+          <Link to="/">
+            <BottomNavigationAction label="Home" icon={<Restore />} />
+          </Link>
+          <Link to="/statistic">
+            <BottomNavigationAction
+              label="Statistic"
+              icon={<StackedBarChart />}
+            />
+          </Link>
+          <Link to="/travel">
+            <BottomNavigationAction label="Favorites" icon={<Favorite />} />
+          </Link>
+          <Link to="/community">
+            <BottomNavigationAction label="Archive" icon={<Archive />} />
+          </Link>
+          <Link to="/rewards">
+            <BottomNavigationAction label="Rewards" icon={<Reviews />} />
+          </Link>
         </BottomNavigation>
       </Paper>
     </Container>
