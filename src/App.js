@@ -1,42 +1,82 @@
-import logo from "./logo.svg";
 import "./App.css";
 import { Switch, Route, Link } from "react-router-dom";
-import Login from "./pages/Login";
 import Home from "./pages/Home";
+import {
+  BottomNavigation,
+  BottomNavigationAction,
+  Container,
+  Paper,
+} from "@mui/material";
+import React from "react";
+import {
+  Archive,
+  Favorite,
+  Restore,
+  Reviews,
+  StackedBarChart,
+} from "@mui/icons-material";
+import TravelRoutrer from "./pages/travel/TravelRouter";
+import RewardsRouter from "./pages/rewards/RewardsRouter";
+import CommunityRouter from "./pages/community/CommunityRouter";
+import StatisticRouter from "./pages/statistics/StatisticRouter";
 
 /**
  * This should be our main page where we login and create router for whole app
  * @returns
  */
 export default function App() {
+  const [value, setValue] = React.useState(0);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          <code>#SustainableFuture</code> NoSuchApp
-        </p>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/login">login</Link>
-            </li>
-          </ul>
-        </nav>
-      </header>
-      {/* A <Switch> looks through its children <Route>s and
-            renders the first one that matches the current URL. */}
+    <Container>
       <Switch>
-        <Route path="/login">
-          <Login />
+        <Route path="/rewards">
+          <RewardsRouter />
+        </Route>
+        <Route path="/statistic">
+          <StatisticRouter />
+        </Route>
+        <Route path="/community">
+          <CommunityRouter />
+        </Route>
+        <Route path="/travel">
+          <TravelRoutrer />
         </Route>
         <Route path="/">
           <Home />
         </Route>
       </Switch>
-    </div>
+
+      <Paper
+        sx={{ position: "fixed", bottom: 0, left: 0, right: 0 }}
+        elevation={3}
+      >
+        <BottomNavigation
+          value={value}
+          onChange={(event, newValue) => {
+            setValue(newValue);
+          }}
+        >
+          <Link to="/">
+            <BottomNavigationAction label="Home" icon={<Restore />} />
+          </Link>
+          <Link to="/statistic">
+            <BottomNavigationAction
+              label="Statistic"
+              icon={<StackedBarChart />}
+            />
+          </Link>
+          <Link to="/travel">
+            <BottomNavigationAction label="Favorites" icon={<Favorite />} />
+          </Link>
+          <Link to="/community">
+            <BottomNavigationAction label="Archive" icon={<Archive />} />
+          </Link>
+          <Link to="/rewards">
+            <BottomNavigationAction label="Rewards" icon={<Reviews />} />
+          </Link>
+        </BottomNavigation>
+      </Paper>
+    </Container>
   );
 }
