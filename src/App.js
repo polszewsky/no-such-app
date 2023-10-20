@@ -19,7 +19,7 @@ import TravelRoutrer from "./pages/travel/TravelRouter";
 import RewardsRouter from "./pages/rewards/RewardsRouter";
 import CommunityRouter from "./pages/community/CommunityRouter";
 import StatisticRouter from "./pages/statistics/StatisticRouter";
-import AddTravelRouter from "./pages/addTravel/AddTravelRouter";
+import AddTravelRouter from "./pages/travel/addTravel/AddTravelRouter";
 
 /**
  * This should be our main page where we login and create router for whole app
@@ -40,11 +40,11 @@ export default function App() {
         <Route path="/community">
           <CommunityRouter />
         </Route>
-        <Route path="/travel">
+        <Route path="/travel/addTravel">
+            <AddTravelRouter />
+          </Route>
+        <Route path="/travel" >
           <TravelRoutrer />
-        </Route>
-        <Route path="/addTravel">
-          <AddTravelRouter />
         </Route>
         <Route path="/">
           <Home />
