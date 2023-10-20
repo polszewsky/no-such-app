@@ -5,6 +5,8 @@ import { Link } from "react-router-dom";
 import PointsIndex from "./home/PointsIndex";
 import LastTravels from "./home/LastTravels";
 import WeeklyDataCharts from "./home/WeeklyDataCharts";
+import CommunityComparasion from "./home/CommunityComparasion";
+import DidYouKnow from "./home/DidYouKnow";
 
 export default function Home() {
   return (
@@ -21,6 +23,10 @@ export default function Home() {
       <LastTravels />
 
       <WeeklyDataCharts />
+
+      <CommunityComparasion />
+
+      <DidYouKnow />
 
       <Grid item>
         <Link to="/travel/add-travel">

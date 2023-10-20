@@ -2,7 +2,7 @@ import { Grid, Paper, Typography } from "@mui/material";
 import React from "react";
 import {
   HorizontalGridLines,
-  LineSeries,
+  VerticalBarSeries,
   VerticalGridLines,
   XAxis,
   XYPlot,
@@ -10,17 +10,15 @@ import {
 } from "react-vis";
 
 export default function WeeklyDataCharts() {
-  const data = [
-    { x: 0, y: 8 },
-    { x: 1, y: 5 },
-    { x: 2, y: 4 },
-    { x: 3, y: 9 },
-    { x: 4, y: 1 },
-    { x: 5, y: 7 },
-    { x: 6, y: 6 },
-    { x: 7, y: 3 },
-    { x: 8, y: 2 },
-    { x: 9, y: 0 },
+  //TODO: what scale ?
+  const blueData = [
+    { x: "Mon", y: 6 },
+    { x: "Tue", y: 8 },
+    { x: "Wed", y: 5 },
+    { x: "Thu", y: 9 },
+    { x: "Fir", y: 11 },
+    { x: "Sat", y: 10 },
+    { x: "Sun", y: 7 },
   ];
 
   return (
@@ -35,7 +33,7 @@ export default function WeeklyDataCharts() {
         <Paper sx={{ padding: "0.5rem" }} elevation={3}>
           <Grid container item direction="row">
             <Typography variant="body2" sx={{ fontWeight: 500 }}>
-              Weekly Statistics
+              Weekly Data
             </Typography>
           </Grid>
           <Grid
@@ -46,12 +44,12 @@ export default function WeeklyDataCharts() {
             alignItems="center"
           >
             <Grid item>
-              <XYPlot height={300} width={300}>
+              <XYPlot xType="ordinal" height={300} width={400} xDistance={100}>
                 <VerticalGridLines />
                 <HorizontalGridLines />
                 <XAxis />
                 <YAxis />
-                <LineSeries data={data} />
+                <VerticalBarSeries data={blueData} />
               </XYPlot>
             </Grid>
           </Grid>

@@ -29,8 +29,8 @@ export default function LastTravels() {
                 justifyContent="center"
                 alignItems="center"
               >
-                {lastTravels.map((tv) => (
-                  <LastTravelRecord travel={tv} />
+                {lastTravels.map((tv, index) => (
+                  <LastTravelRecord travel={tv} key={index} />
                 ))}
               </Grid>
             </Grid>
