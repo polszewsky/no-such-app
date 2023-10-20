@@ -66,17 +66,19 @@ export default function PaperCard(props) {
             <Typography variant="h4">{description}</Typography>
           </Grid>
         </Grid>
-        <Grid
-          item
-          container
-          direction="row"
-          justifyContent="center"
-          alignItems="center"
-        >
-          <Grid item xs={12}>
-            <ColorButton fullWidth>{buttonLabel}</ColorButton>
+        {buttonLabel !== "" && (
+          <Grid
+            item
+            container
+            direction="row"
+            justifyContent="center"
+            alignItems="center"
+          >
+            <Grid item xs={12}>
+              <ColorButton fullWidth>{buttonLabel}</ColorButton>
+            </Grid>
           </Grid>
-        </Grid>
+        )}
       </Grid>
     </Paper>
   );

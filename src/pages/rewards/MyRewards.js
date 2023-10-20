@@ -3,13 +3,26 @@ import {
   CardActionArea,
   CardContent,
   CardMedia,
+  Chip,
   Grid,
   Typography,
 } from "@mui/material";
-import { Fragment } from "react";
+import { Fragment, useState } from "react";
 import TitleReturnBar from "../../components/TitleReturnBar";
+import RewardDialog from "./RewardDialog";
+import { Check, AccessTime } from "@mui/icons-material";
 
 export default function MyRewards() {
+  const [openClaim, setOpenClaim] = useState(false);
+
+  const handleClickOpen = () => {
+    setOpenClaim(true);
+  };
+
+  const handleClaimClose = () => {
+    setOpenClaim(false);
+  };
+
   return (
     <Fragment>
       <TitleReturnBar site="My Rewards" />
@@ -17,7 +30,10 @@ export default function MyRewards() {
       <Grid container direct="column" spacing={3}>
         <Grid container item direction="row" sx={{ marginTop: "1rem" }}>
           <Grid item xs={12}>
-            <Card sx={{ minWidth: "100%", background: "#abc6bf" }}>
+            <Card
+              sx={{ minWidth: "100%", background: "#abc6bf" }}
+              onClick={() => handleClickOpen()}
+            >
               <CardActionArea>
                 <CardMedia
                   component="img"
@@ -26,7 +42,20 @@ export default function MyRewards() {
                   alt="green iguana"
                 />
                 <CardContent>
-                  <Typography variant="h4">$2 Gift Card</Typography>
+                  <Grid
+                    container
+                    item
+                    direction="row"
+                    justifyContent="space-around"
+                    alignItems="center"
+                  >
+                    <Grid item>
+                      <Typography variant="h4">$2 Gift Card</Typography>{" "}
+                    </Grid>
+                    <Grid item>
+                      <Chip label="claimed" color="success" icon={<Check />} />
+                    </Grid>
+                  </Grid>
                 </CardContent>
               </CardActionArea>
             </Card>
@@ -35,7 +64,10 @@ export default function MyRewards() {
 
         <Grid container item direction="row">
           <Grid item xs={12}>
-            <Card sx={{ maxWidth: "100%", background: "#abc6bf" }}>
+            <Card
+              sx={{ maxWidth: "100%", background: "#abc6bf" }}
+              onClick={() => handleClickOpen()}
+            >
               <CardActionArea>
                 <CardMedia
                   component="img"
@@ -44,15 +76,62 @@ export default function MyRewards() {
                   alt="green iguana"
                 />
                 <CardContent>
-                  <Typography variant="h4" component="div">
-                    $1 Gift Card
-                  </Typography>
+                  <Grid
+                    container
+                    item
+                    direction="row"
+                    justifyContent="space-around"
+                    alignItems="center"
+                  >
+                    <Grid item>
+                      <Typography variant="h4">$1 Gift Card</Typography>{" "}
+                    </Grid>
+                    <Grid item>
+                      <Chip label="waiting" icon={<AccessTime />} />
+                    </Grid>
+                  </Grid>
+                </CardContent>
+              </CardActionArea>
+            </Card>
+          </Grid>
+        </Grid>
+
+        <Grid container item direction="row" sx={{ marginBottom: "5rem" }}>
+          <Grid item xs={12}>
+            <Card
+              sx={{ maxWidth: "100%", background: "#abc6bf" }}
+              onClick={() => handleClickOpen()}
+            >
+              <CardActionArea>
+                <CardMedia
+                  component="img"
+                  height="180"
+                  image="https://glovoapp.com/images/open-graph-image-glovo.jpeg"
+                  alt="green iguana"
+                />
+                <CardContent>
+                  <Grid
+                    container
+                    item
+                    direction="row"
+                    justifyContent="space-around"
+                    alignItems="center"
+                  >
+                    <Grid item>
+                      <Typography variant="h4">5% Off Glovo</Typography>{" "}
+                    </Grid>
+                    <Grid item>
+                      <Chip label="claimed" color="success" icon={<Check />} />
+                    </Grid>
+                  </Grid>
                 </CardContent>
               </CardActionArea>
             </Card>
           </Grid>
         </Grid>
       </Grid>
+
+      <RewardDialog open={openClaim} handleClose={handleClaimClose} />
     </Fragment>
   );
 }
