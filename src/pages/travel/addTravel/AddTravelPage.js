@@ -1,7 +1,6 @@
-import { Grid, OutlinedInput, TextField } from "@mui/material";
+import { Grid, TextField } from "@mui/material";
 import DirectionsCarIcon from '@mui/icons-material/DirectionsCar';
 import GarageIcon from '@mui/icons-material/Garage';
-import LocalGasStationIcon from '@mui/icons-material/LocalGasStation';
 import StartIcon from '@mui/icons-material/Start';
 import SportsScoreIcon from '@mui/icons-material/SportsScore';
 import CreateIcon from '@mui/icons-material/Create';

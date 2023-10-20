@@ -1,24 +1,20 @@
-import { Button } from "@mui/material";
-import { useDispatch, useSelector } from "react-redux";
-import { decrement, increment } from "../reducers/counterReducer";
+import { Grid } from "@mui/material";
+import CommuteIcon from '@mui/icons-material/Commute';
+import Fab from '@mui/material/Fab';
+import { Link } from "react-router-dom";
 
 export default function Home() {
-  const dispatch = useDispatch();
-
-  const { value } = useSelector((state) => state.counter);
 
   return (
-    <div>
-      Home
-      {/* <p>Counter: {value ?? 0}</p>
-      <p>
-        <Button variant="contained" onClick={() => dispatch(increment())}>
-          +1
-        </Button>
-        <Button variant="contained" onClick={() => dispatch(decrement())}>
-          -1
-        </Button>
-      </p> */}
-    </div>
+      <Grid container spacing={3} direction="column" alignItems="center" justifyContent="center">
+        <h1 alignItems="center" style={{ marginTop: 50 }}>Home page</h1>
+        <Grid>
+         <Link to="/travel/addTravel">
+            <Fab color="primary" aria-label="add" sx={{position: "fixed",bottom: (theme) => theme.spacing(9),right: (theme) => theme.spacing(2)}}>
+              <CommuteIcon style={{fontSize: 42}} />
+            </Fab>
+          </Link>
+        </Grid>
+      </Grid>
   );
 }
