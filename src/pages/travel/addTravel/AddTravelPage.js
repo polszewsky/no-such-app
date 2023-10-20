@@ -1,6 +1,7 @@
 import { Grid, TextField } from "@mui/material";
 import DirectionsCarIcon from "@mui/icons-material/DirectionsCar";
 import GarageIcon from "@mui/icons-material/Garage";
+import LocalGasStationIcon from '@mui/icons-material/LocalGasStation';
 import StartIcon from "@mui/icons-material/Start";
 import SportsScoreIcon from "@mui/icons-material/SportsScore";
 import CreateIcon from "@mui/icons-material/Create";
@@ -51,10 +52,10 @@ export default function AddTravelPage() {
         xs={12}
         sx={{ display: "flex", alignItems: "flex-end" }}
       >
-        <GarageIcon sx={{ mr: 1, my: 0.5 }} />
+        <LocalGasStationIcon sx={{ mr: 1, my: 0.5 }} />
         <TextField
           variant="standard"
-          label="Average fuel conumption"
+          label="Average fuel consumption"
           style={{ marginRight: 5 }}
         />
       </Grid>
