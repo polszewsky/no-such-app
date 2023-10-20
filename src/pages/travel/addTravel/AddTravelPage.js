@@ -6,6 +6,11 @@ import StartIcon from "@mui/icons-material/Start";
 import SportsScoreIcon from "@mui/icons-material/SportsScore";
 import CreateIcon from "@mui/icons-material/Create";
 import Button from "@mui/material/Button";
+import InputLabel from '@mui/material/InputLabel';
+import FormControl from '@mui/material/FormControl';
+import NativeSelect from '@mui/material/NativeSelect';
+import cars from "../../../components/UserVehicles"
+import types from "../../../components/VehicleTypes"
 
 export default function AddTravelPage() {
   return (
@@ -21,34 +26,51 @@ export default function AddTravelPage() {
       </h1>
       <Grid
         justifyContent="center"
-        item
+        item style={{width: "300px"}}
         xs={12}
         sx={{ display: "flex", alignItems: "flex-end" }}
       >
         <DirectionsCarIcon sx={{ mr: 1, my: 0.5 }} />
-        <TextField
-          variant="standard"
-          label="Vehicle type"
-          style={{ marginRight: 5 }}
-          startIcon={<DirectionsCarIcon />}
-        />
+        <FormControl fullWidth>
+          <InputLabel variant="standard">
+            Vehicle type
+          </InputLabel>
+          <NativeSelect
+            placeholder="Vehicle type"
+          >
+            <option >{types[0]}</option>
+            <option >{types[1]}</option>
+            <option >{types[2]}</option>
+            <option >{types[3]}</option>
+            <option >{types[4]}</option>
+            <option >{types[5]}</option>
+          </NativeSelect>
+          </FormControl>
       </Grid>
       <Grid
         justifyContent="center"
-        item
+        item style={{width: "300px"}}
         xs={12}
         sx={{ display: "flex", alignItems: "flex-end" }}
       >
         <GarageIcon sx={{ mr: 1, my: 0.5 }} />
-        <TextField
-          variant="standard"
-          label="Your vehicles"
-          style={{ marginRight: 5 }}
-        />
+          <FormControl fullWidth>
+          <InputLabel variant="standard">
+            Your vehicles
+          </InputLabel>
+          <NativeSelect
+            placeholder="Your vehicles"
+          >
+            <option value={cars.cars[0].fuelUsage}>{cars.cars[0].brand} {cars.cars[0].model}</option>
+            <option value={cars.cars[0].fuelUsage}>{cars.cars[1].brand} {cars.cars[1].model}</option>
+            <option value={cars.cars[0].fuelUsage}>{cars.cars[2].brand} {cars.cars[2].model}</option>
+            <option value={cars.cars[0].fuelUsage}>{cars.cars[3].brand} {cars.cars[3].model}</option>
+          </NativeSelect>
+          </FormControl>
       </Grid>
       <Grid
         justifyContent="center"
-        item
+        item style={{width: "300px"}}
         xs={12}
         sx={{ display: "flex", alignItems: "flex-end" }}
       >
@@ -56,12 +78,12 @@ export default function AddTravelPage() {
         <TextField
           variant="standard"
           label="Average fuel consumption"
-          style={{ marginRight: 5 }}
+          style={{ marginRight: 5, width: "300px" }}
         />
       </Grid>
       <Grid
         justifyContent="center"
-        item
+        item style={{width: "300px"}}
         xs={12}
         sx={{ display: "flex", alignItems: "flex-end" }}
       >
@@ -69,12 +91,12 @@ export default function AddTravelPage() {
         <TextField
           variant="standard"
           label="Starting location"
-          style={{ marginRight: 5 }}
+          style={{ marginRight: 5, width: "300px" }}
         />
       </Grid>
       <Grid
         justifyContent="center"
-        item
+        item style={{width: "300px"}}
         xs={12}
         sx={{ display: "flex", alignItems: "flex-end" }}
       >
@@ -82,7 +104,7 @@ export default function AddTravelPage() {
         <TextField
           variant="standard"
           label="Destination"
-          style={{ marginRight: 5 }}
+          style={{ marginRight: 5, width: "300px" }}
         />
       </Grid>
       <Grid
