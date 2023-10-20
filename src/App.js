@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import {
   BottomNavigation,
   BottomNavigationAction,
+  Box,
   Container,
   Paper,
 } from "@mui/material";
@@ -46,6 +47,8 @@ export default function App() {
           <Home />
         </Route>
       </Switch>
+
+      <Box sx={{ minHeight: "74px" }} />
 
       <Paper
         sx={{ position: "fixed", bottom: 0, left: 0, right: 0 }}

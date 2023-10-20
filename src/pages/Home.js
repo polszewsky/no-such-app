@@ -2,6 +2,9 @@ import { Grid } from "@mui/material";
 import CommuteIcon from "@mui/icons-material/Commute";
 import Fab from "@mui/material/Fab";
 import { Link } from "react-router-dom";
+import PointsIndex from "./home/PointsIndex";
+import LastTravels from "./home/LastTravels";
+import WeeklyDataCharts from "./home/WeeklyDataCharts";
 
 export default function Home() {
   return (
@@ -11,11 +14,15 @@ export default function Home() {
       direction="column"
       alignItems="center"
       justifyContent="center"
+      sx={{ paddingTop: "1rem" }}
     >
-      <h1 alignItems="center" style={{ marginTop: 50 }}>
-        Home page
-      </h1>
-      <Grid>
+      <PointsIndex />
+
+      <LastTravels />
+
+      <WeeklyDataCharts />
+
+      <Grid item>
         <Link to="/travel/add-travel">
           <Fab
             color="primary"
