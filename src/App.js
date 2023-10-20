@@ -57,24 +57,40 @@ export default function App() {
             setValue(newValue);
           }}
         >
-          <Link to="/">
-            <BottomNavigationAction label="Home" icon={<Restore />} />
-          </Link>
-          <Link to="/statistic">
-            <BottomNavigationAction
-              label="Statistic"
-              icon={<StackedBarChart />}
-            />
-          </Link>
-          <Link to="/travel">
-            <BottomNavigationAction label="Favorites" icon={<Favorite />} />
-          </Link>
-          <Link to="/community">
-            <BottomNavigationAction label="Archive" icon={<Archive />} />
-          </Link>
-          <Link to="/rewards">
-            <BottomNavigationAction label="Rewards" icon={<Reviews />} />
-          </Link>
+          <BottomNavigationAction
+            component={Link}
+            to="/"
+            label="Home"
+            icon={<Restore />}
+          />
+
+          <BottomNavigationAction
+            component={Link}
+            to="/statistic"
+            label="Statistic"
+            icon={<StackedBarChart />}
+          />
+
+          <BottomNavigationAction
+            component={Link}
+            to="/travel"
+            label="Favorites"
+            icon={<Favorite />}
+          />
+
+          <BottomNavigationAction
+            component={Link}
+            to="/community"
+            label="Archive"
+            icon={<Archive />}
+          />
+
+          <BottomNavigationAction
+            component={Link}
+            to="/rewards"
+            label="Rewards"
+            icon={<Reviews />}
+          />
         </BottomNavigation>
       </Paper>
     </Container>
