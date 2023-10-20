@@ -15,6 +15,7 @@ import {
 } from "react-router-dom/cjs/react-router-dom";
 import { useCallback } from "react";
 import PaperCard from "../../components/PaperCard";
+import NavigateNextIcon from "@mui/icons-material/NavigateNext";
 
 export default function RewardsPage() {
   let match = useRouteMatch();
@@ -34,10 +35,40 @@ export default function RewardsPage() {
     >
       <Grid container direction="row" alignItems="center">
         <Grid item xs={12}>
+          <Paper sx={{ padding: "1rem" }}>
+            <Grid container item direction="row" justifyContent="space-around">
+              <Grid item xs={5}>
+                <Typography
+                  variant="h2"
+                  sx={{ fontWeight: 500, fontSize: "54pt" }}
+                >
+                  1 1 3
+                </Typography>
+              </Grid>
+
+              <Grid item xs={5}>
+                <Typography variant="h4"> CO2-KENS</Typography>
+              </Grid>
+            </Grid>
+          </Paper>
+        </Grid>
+      </Grid>
+
+      <Grid
+        container
+        direction="row"
+        alignItems="center"
+        sx={{ marginTop: "1rem" }}
+      >
+        <Grid item xs={12}>
           <PaperCard
             actionOnClick={handleOnClick}
-            buttonLabel="Check rewards"
-            title="Your&nbsp;&nbsp;&nbsp;rewards"
+            title={
+              <>
+                My&nbsp;&nbsp;&nbsp;rewards&nbsp;&nbsp;
+                <NavigateNextIcon />
+              </>
+            }
             description="2 / 7"
           />
         </Grid>
@@ -153,16 +184,23 @@ export default function RewardsPage() {
           </TimelineItem>
         </Timeline>
       </Grid>
-      <Grid container direction="row" alignItems="center">
+      <Grid
+        container
+        direction="row"
+        alignItems="center"
+        sx={{ marginBottom: "3rem" }}
+      >
         <Grid item xs={12}>
-          <Paper elevation={3} sx={{ padding: "1rem", background: "#F0F4F5" }}>
+          <Paper elevation={3} sx={{ padding: "1rem" }}>
             <Grid
               container
               direction="row"
               justifyContent="center"
               alignItems="center"
             >
-              <Grid item>Start Here!</Grid>
+              <Grid item>
+                <Typography>Start Here!</Typography>
+              </Grid>
             </Grid>
           </Paper>
         </Grid>

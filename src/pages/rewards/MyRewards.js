@@ -52,6 +52,26 @@ export default function MyRewards() {
             </Card>
           </Grid>
         </Grid>
+
+        <Grid container item direction="row" sx={{ marginBottom: "5rem" }}>
+          <Grid item xs={12}>
+            <Card sx={{ maxWidth: "100%", background: "#abc6bf" }}>
+              <CardActionArea>
+                <CardMedia
+                  component="img"
+                  height="180"
+                  image="https://glovoapp.com/images/open-graph-image-glovo.jpeg"
+                  alt="green iguana"
+                />
+                <CardContent>
+                  <Typography variant="h4" component="div">
+                    5% Off Card
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+            </Card>
+          </Grid>
+        </Grid>
       </Grid>
     </Fragment>
   );
