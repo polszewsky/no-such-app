@@ -9,7 +9,7 @@ import {
   Paper,
 } from "@mui/material";
 import React from "react";
-import { Garage, Reviews, StackedBarChart } from "@mui/icons-material";
+import { Garage, StackedBarChart } from "@mui/icons-material";
 import TravelRoutrer from "./pages/travel/TravelRouter";
 import RewardsRouter from "./pages/rewards/RewardsRouter";
 import CommunityRouter from "./pages/community/CommunityRouter";
@@ -19,6 +19,7 @@ import FlightTakeoffIcon from "@mui/icons-material/FlightTakeoff";
 import PeopleIcon from "@mui/icons-material/People";
 import Login from "./pages/Login";
 import HomeIcon from "@mui/icons-material/Home";
+import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
 
 /**
  * This should be our main page where we login and create router for whole app
@@ -103,7 +104,7 @@ export default function App() {
             component={Link}
             to="/rewards"
             label="Rewards"
-            icon={<Reviews />}
+            icon={<EmojiEventsIcon />}
           />
         </BottomNavigation>
       </Paper>
