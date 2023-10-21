@@ -9,7 +9,7 @@ import {
   Paper,
 } from "@mui/material";
 import React from "react";
-import { Garage, Restore, Reviews, StackedBarChart } from "@mui/icons-material";
+import { Garage, Reviews, StackedBarChart } from "@mui/icons-material";
 import TravelRoutrer from "./pages/travel/TravelRouter";
 import RewardsRouter from "./pages/rewards/RewardsRouter";
 import CommunityRouter from "./pages/community/CommunityRouter";
@@ -18,6 +18,7 @@ import VehiclesPage from "./pages/vehicles/VehiclesPage";
 import FlightTakeoffIcon from "@mui/icons-material/FlightTakeoff";
 import PeopleIcon from "@mui/icons-material/People";
 import Login from "./pages/Login";
+import HomeIcon from "@mui/icons-material/Home";
 
 /**
  * This should be our main page where we login and create router for whole app
@@ -25,7 +26,7 @@ import Login from "./pages/Login";
  */
 export default function App() {
   const [value, setValue] = React.useState(0);
-  
+
   return (
     <Container>
       <Switch>
@@ -68,7 +69,7 @@ export default function App() {
             component={Link}
             to="/"
             label="Home"
-            icon={<Restore />}
+            icon={<HomeIcon />}
           />
           <BottomNavigationAction
             component={Link}
