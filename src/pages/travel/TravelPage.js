@@ -18,7 +18,7 @@ export default function TravelPage() {
   };
 
   return <Grid container spacing={5} direction="column" alignItems="center" justifyContent="center">
-        <PointsIndex/>
+        <PointsIndex points="47"/>
         <Grid item>
           <ToggleButtonGroup
             color="primary"
