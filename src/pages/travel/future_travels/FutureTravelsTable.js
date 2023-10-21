@@ -50,7 +50,7 @@ export default function FutureTravelsTable(props) {
           {record?.type === "Plane" && <AirplanemodeActive color="primary" />}
           {record?.type === "Bus" && <BusAlert color="primary" />}
           <span style={{ marginLeft: "1rem", marginRight: "1rem" }}>
-            {record?.type}
+            {record?.from}
           </span>
           <ArrowRightAltIcon color="default" sx={{ marginRight: "1rem" }} />
           {record?.to}{" "}
