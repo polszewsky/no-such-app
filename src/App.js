@@ -20,6 +20,7 @@ import TravelRoutrer from "./pages/travel/TravelRouter";
 import RewardsRouter from "./pages/rewards/RewardsRouter";
 import CommunityRouter from "./pages/community/CommunityRouter";
 import StatisticRouter from "./pages/statistics/StatisticRouter";
+import VehiclesPage from "./pages/vehicles/VehiclesPage";
 
 /**
  * This should be our main page where we login and create router for whole app
@@ -42,6 +43,9 @@ export default function App() {
         </Route>
         <Route path="/travel">
           <TravelRoutrer />
+        </Route>
+        <Route path="/vehicles">
+          <VehiclesPage />
         </Route>
         <Route path="/">
           <Home />
@@ -77,6 +81,13 @@ export default function App() {
             component={Link}
             to="/travel"
             label="Favorites"
+            icon={<Favorite />}
+          />
+
+          <BottomNavigationAction
+            component={Link}
+            to="/vehicles"
+            label="Vehicles"
             icon={<Favorite />}
           />
 
