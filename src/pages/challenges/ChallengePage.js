@@ -1,58 +1,29 @@
-import { Badge, Grid, Paper, Typography, Button } from "@mui/material";
-import React, { Fragment } from "react";
+import { Grid } from "@mui/material";
+import React, { Fragment, useState } from "react";
 import TitleReturnBar from "../../components/TitleReturnBar";
+import { useSelector } from "react-redux";
+import ChallengeCard from "./ChallengeCard";
+import ProcessDialog from "./ProcessDialog";
 
 export default function ChallengePage() {
+  const { challenges = [] } = useSelector((state) => state.challenge);
+
+  const [openProcess, setOpenProcess] = useState(false);
+
   return (
     <Fragment>
       <TitleReturnBar site="Challenges" />
-
       <Grid container direction="column">
-        <Grid container item direction="row" sx={{ marginTop: "1rem" }} xs={12}>
-          <Grid item xs={12} sx={{}}>
-            <Paper
-              elevation={3}
-              sx={{ padding: "1rem", background: "#2f6271" }}
-            >
-              <Grid container item direction="row">
-                <Grid item xs={10}>
-                  <Typography variant="h5">EcoDrive</Typography>
-                </Grid>
-                <Badge
-                  badgeContent={"50pkt"}
-                  color="primary"
-                  anchorOrigin={{
-                    vertical: "top",
-                    horizontal: "right",
-                  }}
-                  sx={{
-                    "& .MuiBadge-badge": {
-                      fontSize: 21,
-                      height: 50,
-                      minWidth: 90,
-                      padding: "0.5rem",
-                    },
-                  }}
-                >
-                  <Grid item xs={2}>
-                    &nbsp;
-                  </Grid>
-                </Badge>
-              </Grid>
-              <Grid container item direction="row">
-                <Grid item xs={12}>
-                  <Typography>
-                    Reduce your car's combustion by 10% over the next 100km.
-                  </Typography>
-                </Grid>
-                <Grid item xs={12}>
-                  <Button>Take up!</Button>
-                </Grid>
-              </Grid>
-            </Paper>
-          </Grid>
-        </Grid>
+        {challenges.length > 0 &&
+          challenges.map((ch, index) => (
+            <ChallengeCard
+              record={ch}
+              key={index}
+              openProcessing={setOpenProcess}
+            />
+          ))}
       </Grid>
+      <ProcessDialog open={openProcess} />
     </Fragment>
   );
 }
