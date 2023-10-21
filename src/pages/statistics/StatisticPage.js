@@ -1,5 +1,6 @@
 import { FormControl, Grid, InputLabel, Typography } from "@mui/material";
 import CarsStats from "./CarsStats";
+import LastMonthEmissions from "./LastMonthEmissions";
 
 
 export default function StatisticPage() {
@@ -17,6 +18,8 @@ export default function StatisticPage() {
         </Grid>
     
       <CarsStats />
+      <LastMonthEmissions />
+      
     </Grid>
   );
 }
