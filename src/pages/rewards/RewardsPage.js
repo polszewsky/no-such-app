@@ -8,7 +8,8 @@ import {
   TimelineOppositeContent,
   TimelineSeparator,
 } from "@mui/lab";
-import { Grid, Paper, Typography } from "@mui/material";
+import { Grid, Typography } from "@mui/material";
+import FlagIcon from '@mui/icons-material/Flag';
 import {
   useHistory,
   useRouteMatch,
@@ -17,6 +18,11 @@ import { useCallback } from "react";
 import PaperCard from "../../components/PaperCard";
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
 import PointsIndex from "../home/PointsIndex";
+import CreditScoreIcon from '@mui/icons-material/CreditScore';
+import CheckroomIcon from '@mui/icons-material/Checkroom';
+import SportsScoreIcon from '@mui/icons-material/SportsScore';
+import CheckBoxIcon from '@mui/icons-material/CheckBox';
+import DisabledByDefaultIcon from '@mui/icons-material/DisabledByDefault';
 
 export default function RewardsPage() {
   let match = useRouteMatch();
@@ -36,23 +42,7 @@ export default function RewardsPage() {
     >
       <Grid container direction="row" alignItems="center">
         <Grid item xs={12}>
-          <PointsIndex points="78" label="tokens" />
-          {/* <Paper sx={{ padding: "1rem" }}>
-            <Grid container item direction="row" justifyContent="space-around">
-              <Grid item xs={5}>
-                <Typography
-                  variant="h2"
-                  sx={{ fontWeight: 500, fontSize: "54pt" }}
-                >
-                  1 1 3
-                </Typography>
-              </Grid>
-
-              <Grid item xs={5}>
-                <Typography variant="h4"> CO2-KENS</Typography>
-              </Grid>
-            </Grid>
-          </Paper> */}
+          <PointsIndex points="212" label="tokens" />
         </Grid>
       </Grid>
 
@@ -62,90 +52,73 @@ export default function RewardsPage() {
         alignItems="center"
         sx={{ marginTop: "1rem" }}
       >
-        <Grid item xs={12}>
+        <Grid item xs={12} >
           <PaperCard
             actionOnClick={handleOnClick}
+            color="blue"
             title={
               <>
                 My&nbsp;&nbsp;&nbsp;rewards&nbsp;&nbsp;
-                <NavigateNextIcon />
+                <NavigateNextIcon color="green" />
               </>
             }
-            description="2 / 7"
+            description={[...Array(3)].map(element => (
+              <CheckBoxIcon style={{fill: "white"}}/>
+            ))}
           />
         </Grid>
       </Grid>
 
       <Grid container direction="row">
+        
         <Timeline position="right">
           {/** item */}
           <TimelineItem>
+            <TimelineOppositeContent
+              sx={{ m: "auto 0" }}
+              align="right"
+              variant="body2"
+              color="text.secondary"
+            >
+              2023-01-01
+            </TimelineOppositeContent>
             <TimelineSeparator>
-              <TimelineConnector />
-              <TimelineDot>
-                <CardGiftcard />
+              <TimelineConnector sx={{ bgcolor: "green" }} />
+              <TimelineDot color="success">
+                <FlagIcon />
               </TimelineDot>
-              <TimelineConnector />
+              <TimelineConnector sx={{ bgcolor: "green" }} />
             </TimelineSeparator>
             <TimelineContent sx={{ py: "12px", px: 2 }}>
-              <Typography variant="h6" component="span">
-                $10 Off Card
+              <Typography component="span">
+                <b>Rewards are waiting!</b>
               </Typography>
-              <Typography>1000 Tokens</Typography>
             </TimelineContent>
           </TimelineItem>
-
           {/** item */}
           <TimelineItem>
+            <TimelineOppositeContent
+              sx={{ m: "auto 0" }}
+              align="right"
+              variant="body2"
+              color="text.secondary"
+            >
+              2023-02-01
+            </TimelineOppositeContent>
             <TimelineSeparator>
-              <TimelineConnector />
-              <TimelineDot>
-                <Fastfood />
+              <TimelineConnector sx={{ bgcolor: "green" }} />
+              <TimelineDot color="success">
+                <Check />
               </TimelineDot>
-              <TimelineConnector />
+              <TimelineConnector sx={{ bgcolor: "green" }} />
             </TimelineSeparator>
             <TimelineContent sx={{ py: "12px", px: 2 }}>
               <Typography variant="h6" component="span">
-                15% Off Glovo
+               Plant a tree!
               </Typography>
-              <Typography>700 Tokens</Typography>
+              <Typography fontSize={12}>50 Tokens</Typography>
             </TimelineContent>
           </TimelineItem>
-
-          {/** item */}
-          <TimelineItem>
-            <TimelineSeparator>
-              <TimelineConnector />
-              <TimelineDot>
-                <CardGiftcard />
-              </TimelineDot>
-              <TimelineConnector />
-            </TimelineSeparator>
-            <TimelineContent sx={{ py: "12px", px: 2 }}>
-              <Typography variant="h6" component="span">
-                $5 Off Card
-              </Typography>
-              <Typography>500 Tokens</Typography>
-            </TimelineContent>
-          </TimelineItem>
-
-          {/** item */}
-          <TimelineItem>
-            <TimelineSeparator>
-              <TimelineConnector />
-              <TimelineDot color="primary">
-                <Fastfood />
-              </TimelineDot>
-              <TimelineConnector />
-            </TimelineSeparator>
-            <TimelineContent sx={{ py: "12px", px: 2 }}>
-              <Typography variant="h6" component="span">
-                10% Off Glovo
-              </Typography>
-              <Typography>250 Tokens</Typography>
-            </TimelineContent>
-          </TimelineItem>
-
           {/** item */}
           <TimelineItem>
             <TimelineOppositeContent
@@ -167,10 +140,9 @@ export default function RewardsPage() {
               <Typography variant="h6" component="span">
                 $1 Gift Card
               </Typography>
-              <Typography>100 Tokens</Typography>
+              <Typography fontSize={12}>100 Tokens</Typography>
             </TimelineContent>
           </TimelineItem>
-
           {/** item */}
           <TimelineItem>
             <TimelineOppositeContent
@@ -179,7 +151,7 @@ export default function RewardsPage() {
               variant="body2"
               color="text.secondary"
             >
-              2023-01-01
+              2023-03-31
             </TimelineOppositeContent>
             <TimelineSeparator>
               <TimelineConnector sx={{ bgcolor: "green" }} />
@@ -190,35 +162,126 @@ export default function RewardsPage() {
             </TimelineSeparator>
             <TimelineContent sx={{ py: "12px", px: 2 }}>
               <Typography variant="h6" component="span">
-                That's a start!
+                Adopt 10 bees!
               </Typography>
-              <Typography>10 Tokens</Typography>
+              <Typography fontSize={12}>200 Tokens</Typography>
             </TimelineContent>
           </TimelineItem>
+          {/** item */}
+          <TimelineItem>
+            <TimelineSeparator>
+              <TimelineConnector />
+              <TimelineDot color="primary">
+                <Fastfood />
+              </TimelineDot>
+              <TimelineConnector />
+            </TimelineSeparator>
+            <TimelineContent sx={{ py: "12px", px: 2 }}>
+              <Typography variant="h6" component="span">
+                10% Off Glovo
+              </Typography>
+              <Typography fontSize={12}>500 Tokens</Typography>
+            </TimelineContent>
+          </TimelineItem>
+          {/** item */}
+          <TimelineItem>
+            <TimelineSeparator>
+              <TimelineConnector />
+              <TimelineDot>
+                <CreditScoreIcon />
+              </TimelineDot>
+              <TimelineConnector />
+            </TimelineSeparator>
+            <TimelineContent sx={{ py: "12px", px: 2 }}>
+              <Typography variant="h6" component="span">
+               mBank bargain code
+              </Typography>
+              <Typography fontSize={12}>700 Tokens</Typography>
+            </TimelineContent>
+          </TimelineItem>
+          {/** item */}
+          <TimelineItem>
+            <TimelineSeparator>
+              <TimelineConnector />
+              <TimelineDot>
+                <CardGiftcard />
+              </TimelineDot>
+              <TimelineConnector />
+            </TimelineSeparator>
+            <TimelineContent sx={{ py: "12px", px: 2 }}>
+              <Typography variant="h6" component="span">
+                $5 Off Card
+              </Typography>
+              <Typography fontSize={12}>1000 Tokens</Typography>
+            </TimelineContent>
+          </TimelineItem>
+          {/** item */}
+          <TimelineItem>
+            <TimelineSeparator>
+              <TimelineConnector />
+              <TimelineDot>
+                <Fastfood />
+              </TimelineDot>
+              <TimelineConnector />
+            </TimelineSeparator>
+            <TimelineContent sx={{ py: "12px", px: 2 }}>
+              <Typography variant="h6" component="span">
+                15% Off Glovo
+              </Typography>
+              <Typography fontSize={12}>1500 Tokens</Typography>
+            </TimelineContent>
+          </TimelineItem>
+          {/** item */}
+          <TimelineItem>
+            <TimelineSeparator>
+              <TimelineConnector />
+              <TimelineDot>
+                <CardGiftcard />
+              </TimelineDot>
+              <TimelineConnector />
+            </TimelineSeparator>
+            <TimelineContent sx={{ py: "12px", px: 2 }}>
+              <Typography variant="h6" component="span">
+                $10 Off CCC footgear
+              </Typography>
+              <Typography fontSize={12}>2000 Tokens</Typography>
+            </TimelineContent>
+          </TimelineItem>
+          {/** item */}
+          <TimelineItem>
+            <TimelineSeparator>
+              <TimelineConnector />
+              <TimelineDot>
+                <CheckroomIcon />
+              </TimelineDot>
+              <TimelineConnector />
+            </TimelineSeparator>
+            <TimelineContent sx={{ py: "12px", px: 2 }}>
+              <Typography variant="h6" component="span">
+                15% Off Reserved
+              </Typography>
+              <Typography fontSize={12}>3000 Tokens</Typography>
+            </TimelineContent>
+          </TimelineItem>
+          {/** item */}
+          <TimelineItem>
+            <TimelineSeparator>
+              <TimelineConnector />
+              <TimelineDot>
+                <SportsScoreIcon />
+              </TimelineDot>
+            </TimelineSeparator>
+            <TimelineContent sx={{ py: "12px", px: 2 }}>
+              <Typography variant="h6" component="span">
+                That's final surprise!
+              </Typography>
+              <Typography fontSize={12}>5000 Tokens</Typography>
+            </TimelineContent>
+          </TimelineItem>
+          
 
           {/** // end */}
         </Timeline>
-      </Grid>
-      <Grid
-        container
-        direction="row"
-        alignItems="center"
-        sx={{ marginBottom: "3rem" }}
-      >
-        <Grid item xs={12}>
-          <Paper elevation={3} sx={{ padding: "1rem" }}>
-            <Grid
-              container
-              direction="row"
-              justifyContent="center"
-              alignItems="center"
-            >
-              <Grid item>
-                <Typography>Start Here!</Typography>
-              </Grid>
-            </Grid>
-          </Paper>
-        </Grid>
       </Grid>
     </Grid>
   );

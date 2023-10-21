@@ -5,11 +5,6 @@ import Typography from "@mui/material/Typography";
 import Fab from "@mui/material/Fab";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import image from "../../components/img/community.png";
-import Accordion from "@mui/material/Accordion";
-import AccordionSummary from "@mui/material/AccordionSummary";
-import AccordionDetails from "@mui/material/AccordionDetails";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import SignalCellularAltIcon from "@mui/icons-material/SignalCellularAlt";
 import { community } from "../../components/Community";
 
 export default function CommunityPage() {
@@ -33,50 +28,60 @@ export default function CommunityPage() {
       </Grid>
       <Grid item container spacint={2} marginTop={2} direction="row">
         <Grid item xs={12}>
-          <Accordion spacing={3}>
-            <AccordionSummary
-              expandIcon={<ExpandMoreIcon />}
-              aria-controls="panel1a-content"
-              id="panel1a-header"
-            >
-              <Typography item>Your statistics</Typography>
-              <SignalCellularAltIcon spacing={3} />
-            </AccordionSummary>
-            <AccordionDetails>
-              <Grid
-                item
-                justifyContent="center"
-                xs={12}
-                display={"flex"}
-                width="auto"
-              >
-                <Typography display="left" marginRight={7}>
-                  <b>C02: </b>
-                </Typography>
-                <Typography display="center">
-                  <b>Tokens: </b>
-                </Typography>
-                <Typography display="right" marginLeft={7}>
-                  <b>Better than:</b>
-                </Typography>
-              </Grid>
-              <Grid
-                item
-                justifyContent="center"
-                xs={12}
-                display={"flex"}
-                width="auto"
-              >
-                <Typography display="left" marginRight={7}>
-                  101kg
-                </Typography>
-                <Typography display="center">3890</Typography>
-                <Typography display="right" marginLeft={7}>
-                  73%
-                </Typography>
-              </Grid>
-            </AccordionDetails>
-          </Accordion>
+        <Card elevation={3} sx={{ minWidth: 300, marginTop: 2 }}>
+              <CardContent>
+                <Grid
+                  container
+                  item
+                  direction="row"
+                  justifyContent="space-around"
+                  alignItems="center"
+                >
+                  <Typography
+                    sx={{ fontSize: 20 }}
+                    color="text.secondary"
+                    gutterBottom
+                  >
+                    Your statistics
+                  </Typography>
+                </Grid>
+                <Grid
+                  container
+                  item
+                  direction="row"
+                  justifyContent="space-around"
+                  alignItems="center"
+                >
+                  <Grid item>
+                    <Typography variant="h6"><b>CO2</b></Typography>
+                  </Grid>
+                  <Grid item>
+                    <Typography variant="h6"><b>Tokens</b></Typography>
+                  </Grid>
+                  <Grid item>
+                    <Typography variant="h6"><b>Better than</b></Typography>
+                  </Grid>
+                </Grid>
+               <hr/>
+                <Grid
+                  container
+                  item
+                  direction="row"
+                  justifyContent="space-around"
+                  alignItems="center"
+                >
+                  <Grid item>
+                    <Typography variant="h6">157</Typography>
+                  </Grid>
+                  <Grid item>
+                    <Typography variant="h6">5069</Typography>
+                  </Grid>
+                  <Grid item>
+                    <Typography variant="h6">72%</Typography>
+                  </Grid>
+                </Grid>
+              </CardContent>
+            </Card>
         </Grid>
       </Grid>
 
@@ -114,13 +119,13 @@ export default function CommunityPage() {
                   alignItems="center"
                 >
                   <Grid item>
-                    <Typography variant="h4">{element.CO2}</Typography>
+                    <Typography variant="h6">{element.CO2}</Typography>
                   </Grid>
                   <Grid item>
-                    <Typography variant="h4">{element.points}</Typography>
+                    <Typography variant="h6">{element.points}</Typography>
                   </Grid>
                   <Grid item>
-                    <Typography variant="h4">{element.betterThan}</Typography>
+                    <Typography variant="h6">{element.betterThan}</Typography>
                   </Grid>
                 </Grid>
               </CardContent>

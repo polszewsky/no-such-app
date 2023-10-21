@@ -20,7 +20,7 @@ export default function TitleReturnBar(props) {
       <Box sx={{ flexGrow: 1 }}>
         <AppBar
           sx={{ position: "fixed", top: 0, left: 0, right: 0 }}
-          color="transparent"
+          color="primary"
         >
           <Toolbar>
             <IconButton
