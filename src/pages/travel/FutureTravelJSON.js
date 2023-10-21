@@ -12,11 +12,11 @@ const futureTravels = {
     {
       from: "Madrid",
       to: "Sevilla",
-      CO2: 21,
-      type: "Bike",
+      CO2: 201,
+      type: "Car",
       date: "29.11.2023",
-      recommend: null,
-      recommendCO2: 0,
+      recommend: "Bike",
+      recommendCO2: 21,
     },
     {
       from: "Talinn",
