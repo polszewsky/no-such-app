@@ -11,6 +11,10 @@ import FormControl from '@mui/material/FormControl';
 import NativeSelect from '@mui/material/NativeSelect';
 import cars from "../../../components/UserVehicles"
 import types from "../../../components/VehicleTypes"
+import { DemoContainer } from '@mui/x-date-pickers/internals/demo';
+import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
+import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
+import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 
 export default function AddTravelPage() {
   return (
@@ -38,12 +42,9 @@ export default function AddTravelPage() {
           <NativeSelect
             placeholder="Vehicle type"
           >
-            <option >{types[0]}</option>
-            <option >{types[1]}</option>
-            <option >{types[2]}</option>
-            <option >{types[3]}</option>
-            <option >{types[4]}</option>
-            <option >{types[5]}</option>
+            {types.map(element => (
+              <option >{element}</option>
+            ))}
           </NativeSelect>
           </FormControl>
       </Grid>
@@ -61,10 +62,9 @@ export default function AddTravelPage() {
           <NativeSelect
             placeholder="Your vehicles"
           >
-            <option value={cars.cars[0].fuelUsage}>{cars.cars[0].brand} {cars.cars[0].model}</option>
-            <option value={cars.cars[0].fuelUsage}>{cars.cars[1].brand} {cars.cars[1].model}</option>
-            <option value={cars.cars[0].fuelUsage}>{cars.cars[2].brand} {cars.cars[2].model}</option>
-            <option value={cars.cars[0].fuelUsage}>{cars.cars[3].brand} {cars.cars[3].model}</option>
+            {cars.cars.map(element => (
+              <option value={element.fuelUsage}>{element.brand} {element.model}</option>
+            ))}
           </NativeSelect>
           </FormControl>
       </Grid>
@@ -106,6 +106,23 @@ export default function AddTravelPage() {
           label="Destination"
           style={{ marginRight: 5, width: "300px" }}
         />
+      </Grid>
+      <Grid
+        justifyContent="center"
+        item style={{width: "300px"}}
+        xs={12}
+        sx={{ display: "flex", alignItems: "flex-end" }}
+      >
+        <LocalizationProvider dateAdapter={AdapterDayjs}>
+          <DemoContainer components={['DatePicker']}>
+            <DatePicker label="Date of travel" />
+          </DemoContainer>
+        </LocalizationProvider>
+        {/* <TextField
+          variant="standard"
+          label="Date of travel"
+          style={{ marginRight: 5, width: "300px" }}
+        /> */}
       </Grid>
       <Grid
         container
