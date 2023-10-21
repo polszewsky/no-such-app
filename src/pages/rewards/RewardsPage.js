@@ -45,30 +45,6 @@ export default function RewardsPage() {
           <PointsIndex points="212" label="tokens" />
         </Grid>
       </Grid>
-
-      <Grid
-        container
-        direction="row"
-        alignItems="center"
-        sx={{ marginTop: "1rem" }}
-      >
-        <Grid item xs={12} >
-          <PaperCard
-            actionOnClick={handleOnClick}
-            color="blue"
-            title={
-              <>
-                My&nbsp;&nbsp;&nbsp;rewards&nbsp;&nbsp;
-                <NavigateNextIcon color="green" />
-              </>
-            }
-            description={[...Array(3)].map(element => (
-              <CheckBoxIcon style={{fill: "white"}}/>
-            ))}
-          />
-        </Grid>
-      </Grid>
-
       <Grid container direction="row">
         
         <Timeline position="right">
@@ -270,6 +246,7 @@ export default function RewardsPage() {
               <TimelineDot>
                 <SportsScoreIcon />
               </TimelineDot>
+              <TimelineConnector />
             </TimelineSeparator>
             <TimelineContent sx={{ py: "12px", px: 2 }}>
               <Typography variant="h6" component="span">
@@ -282,6 +259,31 @@ export default function RewardsPage() {
 
           {/** // end */}
         </Timeline>
+      </Grid>
+      <Grid
+        container
+        direction="row"
+        alignItems="center"
+        sx={{ marginTop: "1rem" }}
+      >
+        <Grid item xs={12} >
+          <PaperCard
+            actionOnClick={handleOnClick}
+            color="blue"
+            title={
+              <>
+                My&nbsp;&nbsp;&nbsp;rewards&nbsp;&nbsp;
+                <NavigateNextIcon color="green" />
+              </>
+            }
+            completed={[...Array(3)].map(element => (
+              <CheckBoxIcon style={{fill: "white"}}/>
+            ))}
+            future={[...Array(7)].map(element => (
+              <DisabledByDefaultIcon style={{fill: "white"}}/>
+            ))}
+          />
+        </Grid>
       </Grid>
     </Grid>
   );
