@@ -15,7 +15,8 @@ export default function PaperCard(props) {
     actionOnClick,
     buttonLabel = "",
     title = "",
-    description = "",
+    completed = "",
+    future = "",
   } = props;
 
   return (
@@ -63,7 +64,7 @@ export default function PaperCard(props) {
           alignItems="center"
         >
           <Grid item>
-            <Typography variant="h4">{description}</Typography>
+            <Typography variant="h4">{completed} {future}</Typography>
           </Grid>
         </Grid>
         {buttonLabel !== "" && (

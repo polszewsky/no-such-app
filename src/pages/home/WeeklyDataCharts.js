@@ -33,7 +33,7 @@ export default function WeeklyDataCharts() {
         <Paper sx={{ padding: "0.5rem" }} elevation={3}>
           <Grid container item direction="row">
             <Typography variant="body2" sx={{ fontWeight: 500 }}>
-              Weekly Data
+              Your last week CO2 emissions [kg]
             </Typography>
           </Grid>
           <Grid
