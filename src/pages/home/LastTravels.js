@@ -35,22 +35,6 @@ export default function LastTravels() {
               </Grid>
             </Grid>
           </Grid>
-          <Grid item sx={{ marginTop: "1rem" }}>
-            <Alert severity="info">
-              <AlertTitle> We see you're flying a lot!</AlertTitle>
-              We've created a new challenge for you - plan a train trip!
-              <Grid item xs={10}>
-                <Button
-                    variant="outlined"
-                    color="primary"
-                    fullWidth
-                    onClick={() => {}}
-                >
-                    See the challenge
-                </Button>
-                </Grid>
-            </Alert>
-          </Grid>
         </Paper>
       </Grid>
     </Grid>
