@@ -47,7 +47,7 @@ export default function DidYouKnow() {
                 variant="body2"
                 sx={{ textTransform: "uppercase", fontSize: "31pt" }}
               >
-                {selectedInfo.title ?? ""}
+                {selectedInfo?.title ?? ""}
               </Typography>
             </Grid>
             <Grid item xs={12} sx={{ marginTop: "1rem" }}>
@@ -59,7 +59,7 @@ export default function DidYouKnow() {
               <Button
                 variant="text"
                 onClick={() =>
-                  window.location.replace("https://www.ecosia.org")
+                  window.location.replace(`${selectedInfo?.url ?? ""}`)
                 }
               >
                 Read more

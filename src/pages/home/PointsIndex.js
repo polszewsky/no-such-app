@@ -25,7 +25,7 @@ const StyledCircle = styled("span")({
   boxShadow: "4px 4px 63px -8px rgba(37,78,90, 1)",
 });
 
-export default function PointsIndex() {
+export default function PointsIndex({ points = 0, label = "" }) {
   return (
     <Grid
       container
@@ -35,7 +35,23 @@ export default function PointsIndex() {
       alignItems="center"
     >
       <Grid item>
-        <StyledCircle>78</StyledCircle>
+        <StyledCircle>
+          {points}
+          {label !== "" && (
+            <>
+              <br />
+              <span
+                style={{
+                  fontSize: "11pt",
+                  fontWeight: 200,
+                  letterSpacing: "1px",
+                }}
+              >
+                TOKENS
+              </span>
+            </>
+          )}
+        </StyledCircle>
       </Grid>
     </Grid>
   );

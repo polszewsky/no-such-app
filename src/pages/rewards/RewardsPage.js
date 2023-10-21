@@ -16,6 +16,7 @@ import {
 import { useCallback } from "react";
 import PaperCard from "../../components/PaperCard";
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
+import PointsIndex from "../home/PointsIndex";
 
 export default function RewardsPage() {
   let match = useRouteMatch();
@@ -35,7 +36,8 @@ export default function RewardsPage() {
     >
       <Grid container direction="row" alignItems="center">
         <Grid item xs={12}>
-          <Paper sx={{ padding: "1rem" }}>
+          <PointsIndex points="78" label="tokens" />
+          {/* <Paper sx={{ padding: "1rem" }}>
             <Grid container item direction="row" justifyContent="space-around">
               <Grid item xs={5}>
                 <Typography
@@ -50,7 +52,7 @@ export default function RewardsPage() {
                 <Typography variant="h4"> CO2-KENS</Typography>
               </Grid>
             </Grid>
-          </Paper>
+          </Paper> */}
         </Grid>
       </Grid>
 
@@ -76,6 +78,7 @@ export default function RewardsPage() {
 
       <Grid container direction="row">
         <Timeline position="right">
+          {/** item */}
           <TimelineItem>
             <TimelineSeparator>
               <TimelineConnector />
@@ -91,6 +94,8 @@ export default function RewardsPage() {
               <Typography>1000 Tokens</Typography>
             </TimelineContent>
           </TimelineItem>
+
+          {/** item */}
           <TimelineItem>
             <TimelineSeparator>
               <TimelineConnector />
@@ -106,6 +111,8 @@ export default function RewardsPage() {
               <Typography>700 Tokens</Typography>
             </TimelineContent>
           </TimelineItem>
+
+          {/** item */}
           <TimelineItem>
             <TimelineSeparator>
               <TimelineConnector />
@@ -121,6 +128,8 @@ export default function RewardsPage() {
               <Typography>500 Tokens</Typography>
             </TimelineContent>
           </TimelineItem>
+
+          {/** item */}
           <TimelineItem>
             <TimelineSeparator>
               <TimelineConnector />
@@ -136,6 +145,8 @@ export default function RewardsPage() {
               <Typography>250 Tokens</Typography>
             </TimelineContent>
           </TimelineItem>
+
+          {/** item */}
           <TimelineItem>
             <TimelineOppositeContent
               sx={{ m: "auto 0" }}
@@ -159,6 +170,8 @@ export default function RewardsPage() {
               <Typography>100 Tokens</Typography>
             </TimelineContent>
           </TimelineItem>
+
+          {/** item */}
           <TimelineItem>
             <TimelineOppositeContent
               sx={{ m: "auto 0" }}
@@ -182,6 +195,8 @@ export default function RewardsPage() {
               <Typography>10 Tokens</Typography>
             </TimelineContent>
           </TimelineItem>
+
+          {/** // end */}
         </Timeline>
       </Grid>
       <Grid

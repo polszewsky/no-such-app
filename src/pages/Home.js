@@ -18,7 +18,7 @@ export default function Home() {
       justifyContent="center"
       sx={{ paddingTop: "1rem" }}
     >
-      <PointsIndex />
+      <PointsIndex points="78" />
 
       <LastTravels />
 

@@ -14,7 +14,6 @@ import { Check, AccessTime } from "@mui/icons-material";
 
 export default function MyRewards() {
   const [openClaim, setOpenClaim] = useState(false);
-
   const handleClickOpen = () => {
     setOpenClaim(true);
   };
