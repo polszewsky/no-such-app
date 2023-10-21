@@ -17,6 +17,7 @@ import StatisticRouter from "./pages/statistics/StatisticRouter";
 import VehiclesPage from "./pages/vehicles/VehiclesPage";
 import FlightTakeoffIcon from "@mui/icons-material/FlightTakeoff";
 import PeopleIcon from "@mui/icons-material/People";
+import Login from "./pages/Login";
 
 /**
  * This should be our main page where we login and create router for whole app
@@ -24,7 +25,7 @@ import PeopleIcon from "@mui/icons-material/People";
  */
 export default function App() {
   const [value, setValue] = React.useState(0);
-
+  
   return (
     <Container>
       <Switch>
@@ -42,6 +43,9 @@ export default function App() {
         </Route>
         <Route path="/vehicles">
           <VehiclesPage />
+        </Route>
+        <Route path="/login">
+          <Login />
         </Route>
         <Route path="/">
           <Home />
