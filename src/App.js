@@ -12,6 +12,7 @@ import React from "react";
 import {
   Archive,
   Favorite,
+  Garage,
   Restore,
   Reviews,
   StackedBarChart,
@@ -88,7 +89,7 @@ export default function App() {
             component={Link}
             to="/vehicles"
             label="Vehicles"
-            icon={<Favorite />}
+            icon={<Garage />}
           />
 
           <BottomNavigationAction

@@ -55,6 +55,19 @@ export default function MyRewards() {
                       <Chip label="claimed" color="success" icon={<Check />} />
                     </Grid>
                   </Grid>
+                  <Grid
+                    container
+                    item
+                    direction="row"
+                    justifyContent="flex-end"
+                    alignItems="center"
+                  >
+                    <Grid item>
+                      <Typography variant="body2" color="text.secondary">
+                        Minimal Order Value: USD 10.
+                      </Typography>
+                    </Grid>
+                  </Grid>
                 </CardContent>
               </CardActionArea>
             </Card>
@@ -89,6 +102,19 @@ export default function MyRewards() {
                       <Chip label="waiting" icon={<AccessTime />} />
                     </Grid>
                   </Grid>
+                  <Grid
+                    container
+                    item
+                    direction="row"
+                    justifyContent="flex-end"
+                    alignItems="center"
+                  >
+                    <Grid item>
+                      <Typography variant="body2" color="text.secondary">
+                        Minimal Order Value: USD 10.
+                      </Typography>
+                    </Grid>
+                  </Grid>
                 </CardContent>
               </CardActionArea>
             </Card>
@@ -121,6 +147,19 @@ export default function MyRewards() {
                     </Grid>
                     <Grid item>
                       <Chip label="claimed" color="success" icon={<Check />} />
+                    </Grid>
+                  </Grid>
+                  <Grid
+                    container
+                    item
+                    direction="row"
+                    justifyContent="flex-end"
+                    alignItems="center"
+                  >
+                    <Grid item>
+                      <Typography variant="body2" color="text.secondary">
+                        Minimal Order Value: USD 5.
+                      </Typography>
                     </Grid>
                   </Grid>
                 </CardContent>
