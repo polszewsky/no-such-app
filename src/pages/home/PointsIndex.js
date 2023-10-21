@@ -47,7 +47,7 @@ export default function PointsIndex({ points = 0, label = "" }) {
                   letterSpacing: "1px",
                 }}
               >
-                TOKENS
+                {label}
               </span>
             </>
           )}
