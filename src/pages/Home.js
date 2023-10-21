@@ -7,6 +7,7 @@ import LastTravels from "./home/LastTravels";
 import WeeklyDataCharts from "./home/WeeklyDataCharts";
 import CommunityComparasion from "./home/CommunityComparasion";
 import DidYouKnow from "./home/DidYouKnow";
+import ChallengeHomeWidget from "./home/ChallengeHomeWidget";
 
 export default function Home() {
   return (
@@ -27,6 +28,8 @@ export default function Home() {
       <CommunityComparasion />
 
       <DidYouKnow />
+
+      <ChallengeHomeWidget />
 
       <Grid item>
         <Link to="/travel/add-travel">
