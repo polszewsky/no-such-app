@@ -44,6 +44,11 @@ export default function LastMonthEmissions() {
   { "x": "30", "y": 50 }
 ]
 
+const tickValues = [];
+  for (let i = 0; i < blueData.length; i += 3) {
+    tickValues.push(i.toString());
+  }
+
   return (
     <Grid
       container
@@ -68,9 +73,7 @@ export default function LastMonthEmissions() {
           >
             <Grid item>
               <XYPlot xType="ordinal" height={300} width={400} xDistance={100}>
-                <VerticalGridLines />
-                <HorizontalGridLines />
-                <XAxis />
+                <XAxis tickValues={tickValues} />
                 <YAxis />
                 <VerticalBarSeries data={blueData} />
               </XYPlot>
