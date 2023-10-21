@@ -1,5 +1,13 @@
-import { Alert, AlertTitle, Button, Grid, Paper, Typography } from "@mui/material";
+import {
+  Alert,
+  AlertTitle,
+  Button,
+  Grid,
+  Paper,
+  Typography,
+} from "@mui/material";
 import React from "react";
+import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import {
   HorizontalGridLines,
   VerticalBarSeries,
@@ -10,6 +18,8 @@ import {
 } from "react-vis";
 
 export default function WeeklyDataCharts() {
+  const history = useHistory();
+
   //TODO: what scale ?
   const blueData = [
     { x: "Mon", y: 6 },
@@ -55,18 +65,21 @@ export default function WeeklyDataCharts() {
           </Grid>
           <Grid item xs={12}>
             <Alert severity="info">
-              <AlertTitle> We see you're driving your cars every day</AlertTitle>
+              <AlertTitle>
+                {" "}
+                We see you're driving your cars every day
+              </AlertTitle>
               We've created a new challenge for you - start using your bike!
               <Grid item xs={10}>
                 <Button
-                    variant="outlined"
-                    color="primary"
-                    fullWidth
-                    onClick={() => {}}
+                  variant="outlined"
+                  color="primary"
+                  fullWidth
+                  onClick={() => history.push("/challenges")}
                 >
-                    See the challenge
+                  See the challenge
                 </Button>
-                </Grid>
+              </Grid>
             </Alert>
           </Grid>
         </Paper>

@@ -3,6 +3,7 @@ import counterReducer from "./reducers/counterReducer";
 import homeInformationsReducer from "./reducers/homeInformationsSlice";
 import userVehiclesReducer from "./reducers/userVehiclesSlice";
 import loginReducer from "./reducers/loginSlice";
+import challengeReducer from "./reducers/challengeSlice";
 
 export default configureStore({
   reducer: {
@@ -10,5 +11,6 @@ export default configureStore({
     homeInformations: homeInformationsReducer,
     userVehicles: userVehiclesReducer,
     login: loginReducer,
+    challenge: challengeReducer,
   },
 });

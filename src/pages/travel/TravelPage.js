@@ -1,9 +1,11 @@
 import * as React from "react";
-import { Grid, Tab, Tabs } from "@mui/material";
+import { Fab, Grid, Tab, Tabs } from "@mui/material";
 import pastTravels from "./PastTravelJSON";
 import PastAndFutureTravels from "./PastAndFutureTravels";
 import FutureTravelsPage from "./future_travels/FutureTravelsPage";
 import NoDataPlaceholder from "../../components/NoDataPlaceholder";
+import { Commute } from "@mui/icons-material";
+import { Link } from "react-router-dom/cjs/react-router-dom";
 
 export default function TravelPage() {
   const [currentTab, setValue] = React.useState(1);
@@ -40,6 +42,22 @@ export default function TravelPage() {
       )}
       {currentTab === 1 && <NoDataPlaceholder label="No Travels" />}
       {currentTab === 2 && <FutureTravelsPage />}
+
+      <Grid item>
+        <Link to="/travel/add-travel">
+          <Fab
+            color="primary"
+            aria-label="add"
+            sx={{
+              position: "fixed",
+              bottom: (theme) => theme.spacing(9),
+              right: (theme) => theme.spacing(2),
+            }}
+          >
+            <Commute style={{ fontSize: 42 }} />
+          </Fab>
+        </Link>
+      </Grid>
     </Grid>
   );
 }

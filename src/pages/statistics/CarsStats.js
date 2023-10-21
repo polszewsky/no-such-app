@@ -1,5 +1,13 @@
-import { Alert, AlertTitle, Button, Grid, Paper, Typography } from "@mui/material";
+import {
+  Alert,
+  AlertTitle,
+  Button,
+  Grid,
+  Paper,
+  Typography,
+} from "@mui/material";
 import React from "react";
+import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import {
   HorizontalGridLines,
   VerticalBarSeries,
@@ -10,13 +18,13 @@ import {
 } from "react-vis";
 
 export default function CarsStats() {
+  const history = useHistory();
+
   const blueData = [
     { x: "Audi A4", y: 125 },
     { x: "VW Golf", y: 224 },
     { x: "Toyota", y: 105 },
     { x: "Tesla", y: 32 },
-    
-    
   ];
 
   return (
@@ -53,19 +61,22 @@ export default function CarsStats() {
           </Grid>
 
           <Grid item xs={12}>
-            <Alert severity="info">
-              <AlertTitle> We see you're driving your cars every day</AlertTitle>
+            <Alert severity="warning">
+              <AlertTitle>
+                {" "}
+                We see you're driving your cars every day
+              </AlertTitle>
               We've created a new challenge for you - start using your bike!
-              <Grid item xs={10}>
+              <Grid item xs={11} sx={{ marginTop: "0.5rem" }}>
                 <Button
-                    variant="outlined"
-                    color="primary"
-                    fullWidth
-                    onClick={() => {}}
+                  variant="outlined"
+                  color="warning"
+                  fullWidth
+                  onClick={() => history.push("/challenges")}
                 >
-                    See the challenge
+                  See the challenge
                 </Button>
-                </Grid>
+              </Grid>
             </Alert>
           </Grid>
         </Paper>
