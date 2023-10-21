@@ -19,8 +19,14 @@ export default function TitleReturnBar(props) {
     <Fragment>
       <Box sx={{ flexGrow: 1 }}>
         <AppBar
-          sx={{ position: "fixed", top: 0, left: 0, right: 0 }}
-          color="primary"
+          sx={{
+            position: "fixed",
+            top: 0,
+            left: 0,
+            right: 0,
+            color: "#BEBFC1",
+            backgroundColor: "#272A33",
+          }}
         >
           <Toolbar>
             <IconButton

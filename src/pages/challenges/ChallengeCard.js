@@ -8,7 +8,11 @@ function delay(time) {
   return new Promise((resolve) => setTimeout(resolve, time));
 }
 
-export default function ChallengeCard({ record = {}, openProcessing }) {
+export default function ChallengeCard({
+  record = {},
+  openProcessing,
+  setOpenShare,
+}) {
   const dispatch = useDispatch();
 
   const mockTakeUp = () => {
@@ -75,6 +79,7 @@ export default function ChallengeCard({ record = {}, openProcessing }) {
                     variant="contained"
                     startIcon={<Facebook />}
                     sx={{ marginLeft: "1rem" }}
+                    onClick={() => setOpenShare(true)}
                   >
                     Share
                   </Button>

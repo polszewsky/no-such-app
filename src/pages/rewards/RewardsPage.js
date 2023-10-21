@@ -9,7 +9,7 @@ import {
   TimelineSeparator,
 } from "@mui/lab";
 import { Grid, Typography } from "@mui/material";
-import FlagIcon from '@mui/icons-material/Flag';
+import FlagIcon from "@mui/icons-material/Flag";
 import {
   useHistory,
   useRouteMatch,
@@ -18,11 +18,11 @@ import { useCallback } from "react";
 import PaperCard from "../../components/PaperCard";
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
 import PointsIndex from "../home/PointsIndex";
-import CreditScoreIcon from '@mui/icons-material/CreditScore';
-import CheckroomIcon from '@mui/icons-material/Checkroom';
-import SportsScoreIcon from '@mui/icons-material/SportsScore';
-import CheckBoxIcon from '@mui/icons-material/CheckBox';
-import DisabledByDefaultIcon from '@mui/icons-material/DisabledByDefault';
+import CreditScoreIcon from "@mui/icons-material/CreditScore";
+import CheckroomIcon from "@mui/icons-material/Checkroom";
+import SportsScoreIcon from "@mui/icons-material/SportsScore";
+import CheckBoxIcon from "@mui/icons-material/CheckBox";
+import DisabledByDefaultIcon from "@mui/icons-material/DisabledByDefault";
 
 export default function RewardsPage() {
   let match = useRouteMatch();
@@ -42,11 +42,10 @@ export default function RewardsPage() {
     >
       <Grid container direction="row" alignItems="center">
         <Grid item xs={12}>
-          <PointsIndex points="212" label="tokens" />
+          <PointsIndex points="212" label="tokens" scale={0.8} />
         </Grid>
       </Grid>
       <Grid container direction="row">
-        
         <Timeline position="right">
           {/** item */}
           <TimelineItem>
@@ -90,7 +89,7 @@ export default function RewardsPage() {
             </TimelineSeparator>
             <TimelineContent sx={{ py: "12px", px: 2 }}>
               <Typography variant="h6" component="span">
-               Plant a tree!
+                Plant a tree!
               </Typography>
               <Typography fontSize={12}>50 Tokens</Typography>
             </TimelineContent>
@@ -170,7 +169,7 @@ export default function RewardsPage() {
             </TimelineSeparator>
             <TimelineContent sx={{ py: "12px", px: 2 }}>
               <Typography variant="h6" component="span">
-               mBank bargain code
+                mBank bargain code
               </Typography>
               <Typography fontSize={12}>700 Tokens</Typography>
             </TimelineContent>
@@ -255,7 +254,6 @@ export default function RewardsPage() {
               <Typography fontSize={12}>5000 Tokens</Typography>
             </TimelineContent>
           </TimelineItem>
-          
 
           {/** // end */}
         </Timeline>
@@ -266,7 +264,7 @@ export default function RewardsPage() {
         alignItems="center"
         sx={{ marginTop: "1rem" }}
       >
-        <Grid item xs={12} >
+        <Grid item xs={12}>
           <PaperCard
             actionOnClick={handleOnClick}
             color="blue"
@@ -276,12 +274,25 @@ export default function RewardsPage() {
                 <NavigateNextIcon color="green" />
               </>
             }
-            completed={[...Array(3)].map(element => (
-              <CheckBoxIcon style={{fill: "white"}}/>
+            completed={[...Array(3)].map((element) => (
+              <CheckBoxIcon style={{ fill: "white" }} />
             ))}
-            future={[...Array(7)].map(element => (
-              <DisabledByDefaultIcon style={{fill: "white"}}/>
+            future={[...Array(7)].map((element) => (
+              <DisabledByDefaultIcon style={{ fill: "white" }} />
             ))}
+          />
+        </Grid>
+
+        <Grid item xs={12} sx={{ marginTop: "1rem" }}>
+          <PaperCard
+            actionOnClick={() => history.push("/challenges")}
+            color="blue"
+            title={
+              <>
+                See&nbsp;&nbsp;&nbsp;Challenges&nbsp;&nbsp;
+                <NavigateNextIcon color="green" />
+              </>
+            }
           />
         </Grid>
       </Grid>

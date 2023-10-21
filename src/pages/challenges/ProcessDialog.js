@@ -1,18 +1,10 @@
-import {
-  CircularProgress,
-  Dialog,
-  DialogContent,
-  DialogContentText,
-  DialogTitle,
-  Grid,
-} from "@mui/material";
+import { CircularProgress, Dialog, DialogContent, Grid } from "@mui/material";
 import React from "react";
 
 export default function ProcessDialog({ open }) {
   return (
     <Dialog
       open={open}
-      //onClose={handleClose}
       aria-labelledby="alert-dialog-title"
       aria-describedby="alert-dialog-description"
       maxWidth="md"

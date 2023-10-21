@@ -65,6 +65,9 @@ export default function App() {
         elevation={3}
       >
         <BottomNavigation
+          sx={{
+            backgroundColor: "#272A33",
+          }}
           value={value}
           onChange={(event, newValue) => {
             setValue(newValue);
@@ -75,12 +78,18 @@ export default function App() {
             to="/"
             label="Home"
             icon={<HomeIcon />}
+            sx={{
+              color: "#BEBFC1",
+            }}
           />
           <BottomNavigationAction
             component={Link}
             to="/statistic"
             label="Statistic"
             icon={<StackedBarChart />}
+            sx={{
+              color: "#BEBFC1",
+            }}
           />
 
           <BottomNavigationAction
@@ -88,6 +97,9 @@ export default function App() {
             to="/travel"
             label="Travels"
             icon={<FlightTakeoffIcon />}
+            sx={{
+              color: "#BEBFC1",
+            }}
           />
 
           <BottomNavigationAction
@@ -95,6 +107,9 @@ export default function App() {
             to="/vehicles"
             label="Vehicles"
             icon={<Garage />}
+            sx={{
+              color: "#BEBFC1",
+            }}
           />
 
           <BottomNavigationAction
@@ -102,6 +117,9 @@ export default function App() {
             to="/community"
             label="Community"
             icon={<PeopleIcon />}
+            sx={{
+              color: "#BEBFC1",
+            }}
           />
 
           <BottomNavigationAction
@@ -109,6 +127,9 @@ export default function App() {
             to="/rewards"
             label="Rewards"
             icon={<EmojiEventsIcon />}
+            sx={{
+              color: "#BEBFC1",
+            }}
           />
         </BottomNavigation>
       </Paper>

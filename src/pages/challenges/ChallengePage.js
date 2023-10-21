@@ -1,4 +1,4 @@
-import { Grid } from "@mui/material";
+import { Alert, Grid, Snackbar } from "@mui/material";
 import React, { Fragment, useState } from "react";
 import TitleReturnBar from "../../components/TitleReturnBar";
 import { useSelector } from "react-redux";
@@ -10,6 +10,15 @@ export default function ChallengePage() {
 
   const [openProcess, setOpenProcess] = useState(false);
 
+  const [openShare, setOpenShare] = React.useState(false);
+  const handleClose = (event, reason) => {
+    if (reason === "clickaway") {
+      return;
+    }
+
+    setOpenShare(false);
+  };
+
   return (
     <Fragment>
       <TitleReturnBar site="Challenges" />
@@ -20,9 +29,23 @@ export default function ChallengePage() {
               record={ch}
               key={index}
               openProcessing={setOpenProcess}
+              setOpenShare={setOpenShare}
             />
           ))}
       </Grid>
+
+      <Snackbar
+        open={openShare}
+        onClose={() => setOpenShare(false)}
+        handleClose={handleClose}
+        autoHideDuration={1500}
+        message="Shared on Facebook - Thanks!"
+        sx={{ bottom: "65px" }}
+      >
+        <Alert severity="info" sx={{ width: "100%" }}>
+          Shared on Facebook - Thanks!
+        </Alert>
+      </Snackbar>
       <ProcessDialog open={openProcess} />
     </Fragment>
   );

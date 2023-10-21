@@ -18,12 +18,16 @@ import { GarminIcon } from "../components/img/GarminIcon";
 import { FacebookIcon } from "../components/img/FacebookIcon";
 import { InstagramIcon } from "../components/img/InstagramIcon";
 import ShoppingBasketIcon from "@mui/icons-material/ShoppingBasket";
+import { addUserVehicles } from "../reducers/userVehiclesSlice";
+import { cars } from "../components/UserVehicles";
 
 export default function Synchronize() {
   const dispatch = useDispatch();
   const history = useHistory();
 
   const doSynchronize = () => {
+    dispatch(addUserVehicles(cars.cars));
+
     dispatch(synchronizeUser());
     history.push("/");
   };

@@ -1,7 +1,6 @@
-import { FormControl, Grid, InputLabel, Typography } from "@mui/material";
+import { Grid, Typography } from "@mui/material";
 import CarsStats from "./CarsStats";
 import LastMonthEmissions from "./LastMonthEmissions";
-
 
 export default function StatisticPage() {
   return (
@@ -14,12 +13,11 @@ export default function StatisticPage() {
       sx={{ paddingTop: "1rem" }}
     >
       <Grid item>
-          <Typography variant="h2">Statistics</Typography>
-        </Grid>
-    
+        <Typography variant="h2">Statistics</Typography>
+      </Grid>
+
       <CarsStats />
       <LastMonthEmissions />
-      
     </Grid>
   );
 }
