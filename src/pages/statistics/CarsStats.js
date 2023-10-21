@@ -31,7 +31,7 @@ export default function CarsStats() {
         <Paper sx={{ padding: "0.5rem" }} elevation={3}>
           <Grid container item direction="row">
             <Typography variant="body2" sx={{ fontWeight: 500 }}>
-              Your cars statistics
+              Your cars CO2 emition statistics from last month [kg]
             </Typography>
           </Grid>
           <Grid
