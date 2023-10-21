@@ -11,13 +11,12 @@ import {
 
 export default function CommunityComparasion() {
   const blueData = [
-    { x: "Mon", y: 6 },
-    { x: "Tue", y: 8 },
-    { x: "Wed", y: 5 },
-    { x: "Thu", y: 9 },
-    { x: "Fir", y: 11 },
-    { x: "Sat", y: 10 },
-    { x: "Sun", y: 7 },
+    { x: "1-2 kg", y: 10 },
+    { x: "2-5 kg", y: 20 },
+    { x: "5-10 kg", y: 10 },
+    { x: "10-15 kg", y: 30 },
+    { x: "15-20 kg", y: 20 },
+    
   ];
 
   return (
@@ -32,7 +31,7 @@ export default function CommunityComparasion() {
         <Paper sx={{ padding: "0.5rem" }} elevation={3}>
           <Grid container item direction="row">
             <Typography variant="body2" sx={{ fontWeight: 500 }}>
-              Community Comparasion
+              Percent of your friends in different emission buckets [%]
             </Typography>
           </Grid>
           <Grid
