@@ -27,17 +27,17 @@ export default function MyRewards() {
       <TitleReturnBar site="My Rewards" />
 
       <Grid container direct="column" spacing={3}>
-        <Grid container item direction="row" sx={{ marginTop: "1rem" }}>
+      <Grid container item direction="row" sx={{ marginTop: "1rem" }} >
           <Grid item xs={12}>
             <Card
-              sx={{ minWidth: "100%", background: "#abc6bf" }}
+              sx={{ maxWidth: "100%", background: "#abc6bf" }}
               onClick={() => handleClickOpen()}
             >
               <CardActionArea>
                 <CardMedia
                   component="img"
                   height="180"
-                  image="https://cdn.vox-cdn.com/thumbor/8Df9mD_SJ-MfawE1JGGPZpWx5pQ=/0x0:2040x1360/2000x1333/filters:focal(1020x680:1021x681)/cdn.vox-cdn.com/uploads/chorus_asset/file/23935561/acastro_STK103__04.jpg"
+                  image="https://www.finder.com/niche-builder/5f8f43b3eab58.png"
                   alt="green iguana"
                 />
                 <CardContent>
@@ -49,7 +49,7 @@ export default function MyRewards() {
                     alignItems="center"
                   >
                     <Grid item>
-                      <Typography variant="h4">$2 Off Card</Typography>{" "}
+                      <Typography variant="h4">Plant a tree card</Typography>{" "}
                     </Grid>
                     <Grid item>
                       <Chip label="claimed" color="success" icon={<Check />} />
@@ -64,7 +64,7 @@ export default function MyRewards() {
                   >
                     <Grid item>
                       <Typography variant="body2" color="text.secondary">
-                        Minimal Order Value: USD 10.
+                        Expiration date: 01.01.2025
                       </Typography>
                     </Grid>
                   </Grid>
@@ -73,8 +73,7 @@ export default function MyRewards() {
             </Card>
           </Grid>
         </Grid>
-
-        <Grid container item direction="row">
+        <Grid container item direction="row" sx={{ marginBottom: "1rem" }}>
           <Grid item xs={12}>
             <Card
               sx={{ maxWidth: "100%", background: "#abc6bf" }}
@@ -120,8 +119,7 @@ export default function MyRewards() {
             </Card>
           </Grid>
         </Grid>
-
-        <Grid container item direction="row" sx={{ marginBottom: "5rem" }}>
+        <Grid container item direction="row">
           <Grid item xs={12}>
             <Card
               sx={{ maxWidth: "100%", background: "#abc6bf" }}
@@ -131,7 +129,7 @@ export default function MyRewards() {
                 <CardMedia
                   component="img"
                   height="180"
-                  image="https://glovoapp.com/images/open-graph-image-glovo.jpeg"
+                  image="https://beecard.co.nz/Content/cms/CardInfo.png"
                   alt="green iguana"
                 />
                 <CardContent>
@@ -143,10 +141,10 @@ export default function MyRewards() {
                     alignItems="center"
                   >
                     <Grid item>
-                      <Typography variant="h4">5% Off Glovo</Typography>{" "}
+                      <Typography variant="h4">Adopt a bee</Typography>{" "}
                     </Grid>
                     <Grid item>
-                      <Chip label="claimed" color="success" icon={<Check />} />
+                      <Chip label="waiting" icon={<AccessTime />} />
                     </Grid>
                   </Grid>
                   <Grid
@@ -158,7 +156,7 @@ export default function MyRewards() {
                   >
                     <Grid item>
                       <Typography variant="body2" color="text.secondary">
-                        Minimal Order Value: USD 5.
+                      Expiration date: 01.01.2026
                       </Typography>
                     </Grid>
                   </Grid>

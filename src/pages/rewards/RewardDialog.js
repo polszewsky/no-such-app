@@ -8,8 +8,10 @@ import {
   Typography,
 } from "@mui/material";
 import React, { useEffect, useState } from "react";
+import CheckBoxIcon from '@mui/icons-material/CheckBox';
 
 export default function RewardDialog({ open, handleClose }) {
+
   const codes = [
     "133FI-QDMRG-QT7QO",
     "6829P-NC828-E1M9C",
@@ -35,7 +37,7 @@ export default function RewardDialog({ open, handleClose }) {
         </DialogContentText>
       </DialogContent>
       <DialogActions>
-        <Button onClick={handleClose}>Close</Button>
+        <Button>Copied to clipboard {<CheckBoxIcon style={{fill: "blue"}}/>}</Button>
       </DialogActions>
     </Dialog>
   );
