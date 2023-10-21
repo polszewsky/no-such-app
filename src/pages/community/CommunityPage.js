@@ -54,7 +54,7 @@ export default function CommunityPage() {
                   <b>C02: </b>
                 </Typography>
                 <Typography display="center">
-                  <b>Points: </b>
+                  <b>Tokens: </b>
                 </Typography>
                 <Typography display="right" marginLeft={7}>
                   <b>Better than:</b>
