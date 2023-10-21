@@ -3,12 +3,25 @@ import React from "react";
 import PointsIndex from "../../home/PointsIndex";
 import ImportCallendar from "./ImportCallendar";
 import FutureTravelsTable from "./FutureTravelsTable";
+import futureTravels from "./../FutureTravelJSON";
 
 export default function FutureTravelsPage({
   listOfTravels,
   showPoints = false,
 }) {
-  const data = [{ id: "1" }, { id: "2" }];
+  const travels = futureTravels.travels;
+
+  const calculatePlanedEms = (t) => {
+    let planned = 0;
+    t.forEach((t) => (planned += t?.CO2));
+    return planned;
+  };
+
+  const calculateLowEms = (t) => {
+    let recom = 0;
+    t.forEach((t) => (recom += t?.recommendCO2));
+    return recom;
+  };
 
   return (
     <Grid container item direction="row" spacing={3}>
@@ -24,14 +37,18 @@ export default function FutureTravelsPage({
         >
           <Grid item>
             <PointsIndex
-              points={122}
-              label="% emissions"
+              points={calculatePlanedEms(travels)}
+              label="Kg emissions"
               scale={0.7}
               color="#FF3232"
             />
           </Grid>
           <Grid item>
-            <PointsIndex points={78} label="possible" scale={0.5} />
+            <PointsIndex
+              points={calculateLowEms(travels)}
+              label="possible"
+              scale={0.5}
+            />
           </Grid>
         </Grid>
       </Grid>
@@ -41,11 +58,9 @@ export default function FutureTravelsPage({
       </Grid>
 
       <Grid item xs={12}>
-        <Grid container item direction="row">
-          {data.map((record, index) => (
-            <FutureTravelsTable key={index} record={record} />
-          ))}
-        </Grid>
+        {travels.map((record, index) => (
+          <FutureTravelsTable key={index} record={record} />
+        ))}
       </Grid>
     </Grid>
   );

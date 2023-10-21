@@ -9,19 +9,14 @@ import {
   Paper,
 } from "@mui/material";
 import React from "react";
-import {
-  Garage,
-  Restore,
-  Reviews,
-  StackedBarChart,
-} from "@mui/icons-material";
+import { Garage, Restore, Reviews, StackedBarChart } from "@mui/icons-material";
 import TravelRoutrer from "./pages/travel/TravelRouter";
 import RewardsRouter from "./pages/rewards/RewardsRouter";
 import CommunityRouter from "./pages/community/CommunityRouter";
 import StatisticRouter from "./pages/statistics/StatisticRouter";
 import VehiclesPage from "./pages/vehicles/VehiclesPage";
-import FlightTakeoffIcon from '@mui/icons-material/FlightTakeoff';
-import PeopleIcon from '@mui/icons-material/People';
+import FlightTakeoffIcon from "@mui/icons-material/FlightTakeoff";
+import PeopleIcon from "@mui/icons-material/People";
 
 /**
  * This should be our main page where we login and create router for whole app
@@ -56,7 +51,7 @@ export default function App() {
       <Box sx={{ minHeight: "74px" }} />
 
       <Paper
-        sx={{ position: "fixed", bottom: 0, left: 10, right: 10 }}
+        sx={{ position: "fixed", bottom: 0, left: 0, right: 0 }}
         elevation={3}
       >
         <BottomNavigation

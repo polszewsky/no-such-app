@@ -1,41 +1,51 @@
 const futureTravels = {
-    "travels": [
-        {
-            "from": "Prague",
-            "to": "Łódź",
-            "CO2": 98,
-            "type": "train",
-            "date": "05.11.2023"
-        },
-        {
-            "from": "Madrid",
-            "to": "Sevilla",
-            "CO2": 5,
-            "type": "bike",
-            "date": "29.11.2023"
-        },
-        {
-            "from": "Talinn",
-            "to": "Kaunus",
-            "CO2": 12,
-            "type": "bike",
-            "date": "09.01.2024"
-        },
-        {
-            "from": "New York",
-            "to": "Rijad",
-            "CO2": 8809,
-            "type": "plane",
-            "date": "22.03.2024"
-        },
-        {
-            "from": "Essen",
-            "to": "Monachium",
-            "CO2": 358,
-            "type": "car",
-            "date": "15.06.2024"
-        }
-    ]
-}
+  travels: [
+    {
+      from: "Prague",
+      to: "Łódź",
+      CO2: 294,
+      type: "Plane",
+      date: "05.11.2023",
+      recommend: "Car",
+      recommendCO2: 60.2,
+    },
+    {
+      from: "Madrid",
+      to: "Sevilla",
+      CO2: 21,
+      type: "Bike",
+      date: "29.11.2023",
+      recommend: null,
+      recommendCO2: 0,
+    },
+    {
+      from: "Talinn",
+      to: "Kaunus",
+      CO2: 588,
+      type: "Car",
+      date: "09.01.2024",
+      recommend: "Bus",
+      recommendCO2: 3.6,
+    },
+    {
+      from: "New York",
+      to: "Rijad",
+      CO2: 154,
+      type: "Plane",
+      date: "22.03.2024",
+      recommend: "Eco Plane",
+      recommendCO2: 112,
+    },
+    {
+      from: "Essen",
+      to: "Monachium",
+      CO2: 716,
+      type: "Plane",
+      date: "15.06.2024",
+      recommend: "Car",
+      recommendCO2: 257,
+    },
+  ],
+};
 
-export default futureTravels
+export default futureTravels;

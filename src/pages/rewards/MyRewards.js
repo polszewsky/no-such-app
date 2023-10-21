@@ -49,7 +49,7 @@ export default function MyRewards() {
                     alignItems="center"
                   >
                     <Grid item>
-                      <Typography variant="h4">$2 Gift Card</Typography>{" "}
+                      <Typography variant="h4">$2 Off Card</Typography>{" "}
                     </Grid>
                     <Grid item>
                       <Chip label="claimed" color="success" icon={<Check />} />
@@ -96,7 +96,7 @@ export default function MyRewards() {
                     alignItems="center"
                   >
                     <Grid item>
-                      <Typography variant="h4">$1 Gift Card</Typography>{" "}
+                      <Typography variant="h4">$1 Off Card</Typography>{" "}
                     </Grid>
                     <Grid item>
                       <Chip label="waiting" icon={<AccessTime />} />

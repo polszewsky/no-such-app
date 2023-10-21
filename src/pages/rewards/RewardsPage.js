@@ -89,7 +89,7 @@ export default function RewardsPage() {
             </TimelineSeparator>
             <TimelineContent sx={{ py: "12px", px: 2 }}>
               <Typography variant="h6" component="span">
-                $10 Gift Card
+                $10 Off Card
               </Typography>
               <Typography>1000 Tokens</Typography>
             </TimelineContent>
@@ -123,7 +123,7 @@ export default function RewardsPage() {
             </TimelineSeparator>
             <TimelineContent sx={{ py: "12px", px: 2 }}>
               <Typography variant="h6" component="span">
-                $5 Gift Card
+                $5 Off Card
               </Typography>
               <Typography>500 Tokens</Typography>
             </TimelineContent>
