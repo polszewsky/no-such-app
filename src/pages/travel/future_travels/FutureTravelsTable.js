@@ -114,7 +114,7 @@ export default function FutureTravelsTable(props) {
           </Grid>
 
           <Grid item xs={12}>
-            <Typography variant="h5">Looking for a meal?</Typography>
+            <Typography variant="h5">See our recommendations</Typography>
 
             <ToggleButtonGroup
               color="primary"
