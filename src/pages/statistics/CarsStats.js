@@ -9,16 +9,14 @@ import {
   YAxis,
 } from "react-vis";
 
-export default function WeeklyDataCharts() {
-  //TODO: what scale ?
+export default function CarsStats() {
   const blueData = [
-    { x: "Mon", y: 6 },
-    { x: "Tue", y: 8 },
-    { x: "Wed", y: 5 },
-    { x: "Thu", y: 9 },
-    { x: "Fir", y: 11 },
-    { x: "Sat", y: 10 },
-    { x: "Sun", y: 7 },
+    { x: "Audi A4", y: 125 },
+    { x: "VW Golf", y: 224 },
+    { x: "Toyota", y: 105 },
+    { x: "Tesla", y: 32 },
+    
+    
   ];
 
   return (
@@ -33,7 +31,7 @@ export default function WeeklyDataCharts() {
         <Paper sx={{ padding: "0.5rem" }} elevation={3}>
           <Grid container item direction="row">
             <Typography variant="body2" sx={{ fontWeight: 500 }}>
-              Your last week CO2 emissions [kg]
+              Your cars CO2 emition statistics from last month [kg]
             </Typography>
           </Grid>
           <Grid
@@ -53,6 +51,7 @@ export default function WeeklyDataCharts() {
               </XYPlot>
             </Grid>
           </Grid>
+
           <Grid item xs={12}>
             <Alert severity="info">
               <AlertTitle> We see you're driving your cars every day</AlertTitle>
