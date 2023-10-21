@@ -19,7 +19,8 @@ import FlightTakeoffIcon from "@mui/icons-material/FlightTakeoff";
 import PeopleIcon from "@mui/icons-material/People";
 import Login from "./pages/Login";
 import HomeIcon from "@mui/icons-material/Home";
-import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
+import EmojiEventsIcon from "@mui/icons-material/EmojiEvents";
+import ChallengePage from "./pages/challenges/ChallengePage";
 
 /**
  * This should be our main page where we login and create router for whole app
@@ -45,6 +46,9 @@ export default function App() {
         </Route>
         <Route path="/vehicles">
           <VehiclesPage />
+        </Route>
+        <Route path="/challenges">
+          <ChallengePage />
         </Route>
         <Route path="/login">
           <Login />
