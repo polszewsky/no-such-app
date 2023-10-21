@@ -11,6 +11,7 @@ import AccordionDetails from "@mui/material/AccordionDetails";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import SignalCellularAltIcon from '@mui/icons-material/SignalCellularAlt';
 import PersonIcon from '@mui/icons-material/Person';
+import { community } from "../../components/Community";
 
 
 export default function CommunityPage() {
@@ -65,54 +66,24 @@ export default function CommunityPage() {
           </Accordion>
         </Grid>
         <Grid item xs={12} spacing={2}>
-          <Card sx={{ minWidth: 300, marginTop: 3 }}>
+          {community.people.map((element) => (
+            <Card sx={{ minWidth: 300, marginTop: 3 }}>
             <CardContent>
               <Grid item display={"flex"} justifyContent="center">
                 <PersonIcon/>
                 <Typography sx={{ fontSize: 20 }} color="text.secondary" gutterBottom>
-                  Alice Springfield
+                  {element.name} {element.surname}
                 </Typography>
               </Grid>
               <hr/>
               <Grid item spacing={2} xs={12} justifyContent="center" display={"flex"} width="auto">
-                <Typography display="left" marginRight={7}>124kg</Typography>
-                <Typography display="center">2341</Typography>
-                <Typography display="right" marginLeft={7}>61%</Typography>
+                <Typography display="left" marginRight={7}>{element.CO2}</Typography>
+                <Typography display="center">{element.points}</Typography>
+                <Typography display="right" marginLeft={7}>{element.betterThan}</Typography>
               </Grid>
             </CardContent>
           </Card>
-          <Card sx={{ minWidth: 300, marginTop: 3 }}>
-            <CardContent>
-              <Grid item display={"flex"} justifyContent="center">
-                <PersonIcon/>
-                <Typography sx={{ fontSize: 20 }} color="text.secondary" gutterBottom>
-                  Bob Raider
-                </Typography>
-              </Grid>
-              <hr/>
-              <Grid item spacing={2} xs={12} justifyContent="center" display={"flex"}>
-                <Typography textAlign="left" marginRight={7}>490kg</Typography>
-                <Typography textAlign="center">8009</Typography>
-                <Typography textAlign="right" marginLeft={7}>11%</Typography>
-              </Grid>
-            </CardContent>
-          </Card>
-          <Card sx={{ minWidth: 300, marginTop: 3 }}>
-            <CardContent>
-              <Grid item display={"flex"} justifyContent="center" >
-                <PersonIcon/>
-                <Typography sx={{ fontSize: 20 }} color="text.secondary" gutterBottom>
-                  Alice Cutter
-                </Typography>
-              </Grid>
-              <hr/>
-              <Grid item spacing={2} xs={12} justifyContent="center" display={"flex"}>
-                <Typography textAlign="left" marginRight={6}>230kg</Typography>
-                <Typography textAlign="center">6888</Typography>
-                <Typography textAlign="right" marginLeft={6}>39%</Typography>
-              </Grid>
-            </CardContent>
-          </Card>
+          ))}
         </Grid>
     </Grid>
     <Grid item>
@@ -126,9 +97,9 @@ export default function CommunityPage() {
           right: (theme) => theme.spacing(2),
         }}
       >
-      <FacebookIcon sx={{ mr: 1 }} style={{ fontSize: 42 }} />
-      Synchronized with facebook
-        </Fab>
+        <FacebookIcon sx={{ mr: 1 }} style={{ fontSize: 42 }} />
+        Synchronized with facebook
+      </Fab>
     </Grid>
   </Grid>;
 }
