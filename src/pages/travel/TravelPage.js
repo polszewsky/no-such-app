@@ -3,6 +3,7 @@ import { Grid, Tab, Tabs } from "@mui/material";
 import pastTravels from "./PastTravelJSON";
 import futureTravels from "./FutureTravelJSON";
 import PastAndFutureTravels from "./PastAndFutureTravels";
+import FutureTravelsPage from "./future_travels/FutureTravelsPage";
 
 export default function TravelPage() {
   const [currentTab, setValue] = React.useState(1);
@@ -38,9 +39,7 @@ export default function TravelPage() {
         <PastAndFutureTravels listOfTravels={pastTravels} showPoints />
       )}
       {currentTab === 1 && <>No travels today</>}
-      {currentTab === 2 && (
-        <PastAndFutureTravels listOfTravels={futureTravels} />
-      )}
+      {currentTab === 2 && <FutureTravelsPage listOfTravels={futureTravels} />}
     </Grid>
   );
 }

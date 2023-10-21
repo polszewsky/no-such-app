@@ -2,14 +2,14 @@ import styled from "@emotion/styled";
 import { Grid } from "@mui/material";
 import React from "react";
 
-const StyledCircle = styled("span")({
-  height: "250px",
-  width: "250px",
-  backgroundColor: "#2f6271",
+const StyledCircle = styled("span")(({ scale = 1.0, color }) => ({
+  height: `${250 * scale}px`,
+  width: `${250 * scale}px`,
+  backgroundColor: `${color}`,
   borderRadius: "50%",
 
-  fontSize: "54pt",
-  color: "#fbfbfb",
+  fontSize: `${54 * scale}pt`,
+  color: `#fbfbfb`,
 
   /* its children will be flex items */
   display: "flex",
@@ -23,9 +23,14 @@ const StyledCircle = styled("span")({
   webkitBoxShadow: "4px 4px 63px -8px rgba(37,78,90, 1)",
   mozBoxShadow: "4px 4px 63px -8px rgba(37,78,90, 1)",
   boxShadow: "4px 4px 63px -8px rgba(37,78,90, 1)",
-});
+}));
 
-export default function PointsIndex({ points = 0, label = "" }) {
+export default function PointsIndex({
+  points = 0,
+  label = "",
+  scale = 1.0,
+  color = "#2f6271",
+}) {
   return (
     <Grid
       container
@@ -35,7 +40,7 @@ export default function PointsIndex({ points = 0, label = "" }) {
       alignItems="center"
     >
       <Grid item>
-        <StyledCircle>
+        <StyledCircle scale={scale} color={color}>
           {points}
           {label !== "" && (
             <>
