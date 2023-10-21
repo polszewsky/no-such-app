@@ -33,7 +33,7 @@ export default function MyRewards() {
               sx={{ maxWidth: "100%", background: "#abc6bf" }}
               onClick={() => handleClickOpen()}
             >
-              <CardActionArea>
+              <CardActionArea >
                 <CardMedia
                   component="img"
                   height="180"

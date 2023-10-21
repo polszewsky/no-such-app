@@ -15,8 +15,27 @@ import { DemoContainer } from '@mui/x-date-pickers/internals/demo';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
+import MyLocationIcon from '@mui/icons-material/MyLocation';
+import { useState } from 'react';
 
 export default function AddTravelPage() {
+
+  const [start, setstart] = useState('');
+  const [end, setend] = useState('');
+  const [type, settype] = useState('');
+
+  const handlestartChange = event => {
+      setstart(event.target.value);
+  };
+
+  const handleendChange = event => {
+    setend(event.target.value);
+  };
+
+  const handletypeChange = event => {
+    settype(event.target.value);
+  };
+
   return (
     <Grid
       container
@@ -31,17 +50,17 @@ export default function AddTravelPage() {
       </h1>
       <Grid
         justifyContent="center"
-        item style={{width: "300px"}}
+        item style={{width: "400px"}}
         xs={12}
         sx={{ display: "flex", alignItems: "flex-end" }}
       >
         <DirectionsCarIcon sx={{ mr: 1, my: 0.5 }} />
-        <FormControl fullWidth>
+        <FormControl fullWidth value= {type} onChange= {handletypeChange}>
           <InputLabel variant="standard">
-            Vehicle type
+            Travel type
           </InputLabel>
           <NativeSelect
-            placeholder="Vehicle type"
+            placeholder="Travel type"
           >
             {types.map(element => (
               <option >{element}</option>
@@ -51,7 +70,7 @@ export default function AddTravelPage() {
       </Grid>
       <Grid
         justifyContent="center"
-        item style={{width: "300px"}}
+        item style={{width: "400px"}}
         xs={12}
         sx={{ display: "flex", alignItems: "flex-end" }}
       >
@@ -71,7 +90,7 @@ export default function AddTravelPage() {
       </Grid>
       <Grid
         justifyContent="center"
-        item style={{width: "300px"}}
+        item style={{width: "400px"}}
         xs={12}
         sx={{ display: "flex", alignItems: "flex-end" }}
       >
@@ -79,12 +98,12 @@ export default function AddTravelPage() {
         <TextField
           variant="standard"
           label="Average fuel consumption"
-          style={{ marginRight: 5, width: "300px" }}
+          style={{ marginRight: 5, width: "400px" }}
         />
       </Grid>
       <Grid
         justifyContent="center"
-        item style={{width: "300px"}}
+        item style={{width: "400px"}}
         xs={12}
         sx={{ display: "flex", alignItems: "flex-end" }}
       >
@@ -92,12 +111,14 @@ export default function AddTravelPage() {
         <TextField
           variant="standard"
           label="Starting location"
-          style={{ marginRight: 5, width: "300px" }}
+          value= {start}
+          onChange= {handlestartChange}
+          style={{ marginRight: 5, width: "400px" }}
         />
       </Grid>
       <Grid
         justifyContent="center"
-        item style={{width: "300px"}}
+        item style={{width: "400px"}}
         xs={12}
         sx={{ display: "flex", alignItems: "flex-end" }}
       >
@@ -105,25 +126,22 @@ export default function AddTravelPage() {
         <TextField
           variant="standard"
           label="Destination"
-          style={{ marginRight: 5, width: "300px" }}
+          value= {end}
+          onChange= {handleendChange}
+          style={{ marginRight: 5, width: "400px" }}
         />
       </Grid>
       <Grid
         justifyContent="center"
-        item style={{width: "300px"}}
+        item style={{width: "400px"}}
         xs={12}
         sx={{ display: "flex", alignItems: "flex-end" }}
       >
         <LocalizationProvider dateAdapter={AdapterDayjs}>
           <DemoContainer components={['DatePicker']}>
-            <DatePicker label="Date of travel" />
+            <DatePicker style={{ marginRight: 5}} label="Date of travel" />
           </DemoContainer>
         </LocalizationProvider>
-        {/* <TextField
-          variant="standard"
-          label="Date of travel"
-          style={{ marginRight: 5, width: "300px" }}
-        /> */}
       </Grid>
       <Grid
         container
@@ -133,12 +151,26 @@ export default function AddTravelPage() {
         item
         xs={12}
       >
-        <Button
-          variant="outlined"
-          startIcon={<CreateIcon style={{ fontSize: 36 }} />}
-        >
-          Create
-        </Button>
+        <Grid item xs={6}>
+          <Button
+            variant="contained"
+            startIcon={<CreateIcon style={{ fontSize: 36, color: "white"}} />}
+            sx={{bgcolor: "blue"}}
+          >
+            <p>Save</p>
+          </Button>
+        </Grid>
+        <Grid item xs={6}>
+          <Button
+            variant="contained"
+            startIcon={<MyLocationIcon style={{ fontSize: 36, color: "white"}} />}
+            // onClick={(() => window.open("https://www.google.com/maps?f=d&saddr=" + start + "&daddr=" + end + "&dirflg=d"))}
+            onClick={(() => window.open("https://www.google.com/maps/dir/?api=1&origin=" + start + "&destination=" + end + "&travelmode=" + type))}
+            sx={{bgcolor: "blue"}}
+          >
+            <p>Save and navigate</p>
+          </Button>
+        </Grid>
       </Grid>
     </Grid>
   );
