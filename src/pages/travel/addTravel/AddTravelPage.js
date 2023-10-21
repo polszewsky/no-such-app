@@ -24,6 +24,7 @@ export default function AddTravelPage() {
       direction="column"
       alignItems="center"
       justifyContent="center"
+      textAlign="center"
     >
       <h1 alignItems="center" style={{ marginTop: 50 }}>
         Add next travel

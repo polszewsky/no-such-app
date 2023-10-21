@@ -10,7 +10,6 @@ import {
 } from "@mui/material";
 import React from "react";
 import {
-  Archive,
   Garage,
   Restore,
   Reviews,
@@ -22,6 +21,7 @@ import CommunityRouter from "./pages/community/CommunityRouter";
 import StatisticRouter from "./pages/statistics/StatisticRouter";
 import VehiclesPage from "./pages/vehicles/VehiclesPage";
 import FlightTakeoffIcon from '@mui/icons-material/FlightTakeoff';
+import PeopleIcon from '@mui/icons-material/People';
 
 /**
  * This should be our main page where we login and create router for whole app
@@ -56,7 +56,7 @@ export default function App() {
       <Box sx={{ minHeight: "74px" }} />
 
       <Paper
-        sx={{ position: "fixed", bottom: 0, left: 0, right: 0 }}
+        sx={{ position: "fixed", bottom: 0, left: 10, right: 10 }}
         elevation={3}
       >
         <BottomNavigation
@@ -95,8 +95,8 @@ export default function App() {
           <BottomNavigationAction
             component={Link}
             to="/community"
-            label="Archive"
-            icon={<Archive />}
+            label="Community"
+            icon={<PeopleIcon />}
           />
 
           <BottomNavigationAction
