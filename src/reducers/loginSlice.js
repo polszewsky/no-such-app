@@ -5,8 +5,8 @@ const loginSlice = createSlice({
   initialState: {
     username: "",
     password: "",
-    isAuth: false,
-    isSync: false,
+    isAuth: true,
+    isSync: true,
   },
   reducers: {
     loginAuthenticate: (state) => {
