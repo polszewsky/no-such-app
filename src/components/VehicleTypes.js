@@ -1,5 +1,5 @@
 const types = [
-    'car', 'bike', 'train', 'subway', 'plane', 'motorcycle'
+    'driving', ' transit', 'walking', 'bicycling', 'flying'
 ]
 
 export default types;
