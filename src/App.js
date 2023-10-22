@@ -102,24 +102,12 @@ export default function App() {
               color: "#BEBFC1",
             }}
           />
-          
+
           <BottomNavigationAction
             component={Link}
             to="/statistic"
             label="Statistic"
             icon={<StackedBarChart />}
-            sx={{
-              color: "#BEBFC1",
-            }}
-          />
-
-        
-
-          <BottomNavigationAction
-            component={Link}
-            to="/community"
-            label="Community"
-            icon={<PeopleIcon />}
             sx={{
               color: "#BEBFC1",
             }}
@@ -134,6 +122,18 @@ export default function App() {
               color: "#BEBFC1",
             }}
           />
+
+          <BottomNavigationAction
+            component={Link}
+            to="/community"
+            label="Community"
+            icon={<PeopleIcon />}
+            sx={{
+              color: "#BEBFC1",
+            }}
+          />
+
+          
         </BottomNavigation>
       </Paper>
     </Container>
