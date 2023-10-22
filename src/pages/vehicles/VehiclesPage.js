@@ -26,6 +26,7 @@ import {
   removeUserVehicle,
 } from "../../reducers/userVehiclesSlice";
 import { cars } from "../../components/UserVehicles";
+import PointsIndex from "../home/PointsIndex";
 
 function delay(time) {
   return new Promise((resolve) => setTimeout(resolve, time));
@@ -52,7 +53,6 @@ export default function VehiclesPage() {
       direction="column"
       alignItems="center"
       justifyContent="center"
-      sx={{ paddingTop: "1rem" }}
     >
       {/** IMPORT SECTION */}
       <Grid
@@ -72,7 +72,7 @@ export default function VehiclesPage() {
             sx={{ objectFit: "contain" }}
           />
         </Grid>
-        <Grid item xs={10}>
+        <Grid item xs={10} sx={{ marginTop: "-2rem" }}>
           <Button
             variant="outlined"
             color="primary"
@@ -91,11 +91,34 @@ export default function VehiclesPage() {
         direction="row"
         alignItems="center"
         justifyContent="center"
-        sx={{ marginTop: "2rem" }}
+        sx={{ marginTop: "1rem" }}
       >
+        <Grid item xs={12}>
+          <Grid
+            container
+            item
+            direction="row"
+            justifyContent="space-around"
+            alignItems="flex-end"
+          >
+            <Grid item>
+              <PointsIndex points={373.7} label="liters" scale={0.5} />
+            </Grid>
+            <Grid item>
+              <PointsIndex
+                points={501.34}
+                label="€ paid"
+                scale={0.6}
+                color="#FF3232"
+              />
+            </Grid>
+          </Grid>
+        </Grid>
+
         <Grid item>
           <Typography variant="h2">Your vehicles</Typography>
         </Grid>
+
         <Grid item xs={12} sx={{ marginTop: "1rem" }}>
           {vehicles &&
             vehicles.length > 0 &&
