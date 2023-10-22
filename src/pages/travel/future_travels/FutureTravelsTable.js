@@ -31,6 +31,7 @@ import {
 } from "react-vis";
 import mapsGoogle from "../../../components/img/map.jpg";
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
+import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 
 export default function FutureTravelsTable(props) {
   const { record = {} } = props;
@@ -54,7 +55,7 @@ export default function FutureTravelsTable(props) {
           </span>
           <ArrowRightAltIcon color="default" sx={{ marginRight: "1rem" }} />
           {record?.to}{" "}
-          <span style={{ marginLeft: "1rem" }}>{record?.date}</span>
+          <span style={{ marginLeft: "1rem" }}> <CalendarMonthIcon color="default" sx={{ marginLeft: 3}} />{record?.date}</span>
         </Typography>
       </AccordionSummary>
       <AccordionDetails>
