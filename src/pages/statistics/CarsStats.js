@@ -21,10 +21,13 @@ export default function CarsStats() {
   const history = useHistory();
 
   const blueData = [
-    { x: "Audi A4", y: 125 },
-    { x: "VW Golf", y: 224 },
-    { x: "Toyota", y: 105 },
-    { x: "Tesla", y: 32 },
+    { x: "Mon", y: 6 },
+    { x: "Tue", y: 8 },
+    { x: "Wed", y: 5 },
+    { x: "Thu", y: 9 },
+    { x: "Fir", y: 11 },
+    { x: "Sat", y: 10 },
+    { x: "Sun", y: 7 },
   ];
 
   return (
@@ -39,7 +42,7 @@ export default function CarsStats() {
         <Paper sx={{ padding: "0.5rem" }} elevation={3}>
           <Grid container item direction="row">
             <Typography variant="body2" sx={{ fontWeight: 500 }}>
-              Your cars CO2 emition statistics from last month [kg]
+              Your car CO2 emitions in last week [kg]
             </Typography>
           </Grid>
           <Grid
