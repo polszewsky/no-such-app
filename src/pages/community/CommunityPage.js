@@ -17,69 +17,7 @@ export default function CommunityPage() {
       alignItems="center"
       justifyContent="center"
     >
-<<<<<<< HEAD
-      <Grid item xs={12}>
-        <CardMedia
-          component="img"
-          height="128"
-          width="128"
-          image={image}
-          alt="Paella dish"
-          sx={{ objectFit: "contain", paddingTop: "1rem" }}
-        />
-      </Grid>
-      <Grid item container spacint={2} marginTop={2} >
-        <Grid item xs={12}>
-        <Card elevation={3} sx={{ minWidth: 300, marginTop: 2, bgcolor: "#42a5f5" }}>
-              <CardContent>
-                <Grid
-                  container
-                  item
-                  direction="row"
-                  justifyContent="space-around"
-                  alignItems="center"
-                >
-                  <Typography
-                    sx={{ fontSize: 25 }}
-                    color="text.secondary"
-                    gutterBottom
-                  >
-                    Your statistics
-                  </Typography>
-                </Grid>
-                <Grid
-                  container
-                  direction="row"
-                  justifyContent="space-around"
-                  alignItems="center"
-                >
-                  <Grid item>
-                    <Typography variant="h6"><b>CO2</b></Typography>
-                  </Grid>
-                  <Grid item>
-                    <Typography variant="h6"><b>Tokens</b></Typography>
-                  </Grid>
-                  <Grid item>
-                    <Typography variant="h6"><b>Better than</b></Typography>
-                  </Grid>
-                </Grid>
-               <hr/>
-                <Grid
-                  container
-                  direction="row"
-                  justifyContent="space-around"
-                  alignItems="center"
-                >
-                  <Grid item>
-                    <Typography sx={{ fontSize: 20 }} >157</Typography>
-                  </Grid>
-                  <Grid item>
-                    <Typography sx={{ fontSize: 20 }}>5069</Typography>
-                  </Grid>
-                  <Grid item>
-                    <Typography sx={{ fontSize: 20 }}>72%</Typography>
-                  </Grid>
-=======
+
       <Grid item container marginTop={2} direction="row">
         <Grid item xs={12}>
           <Card
@@ -124,7 +62,7 @@ export default function CommunityPage() {
                   <Typography variant="h6">
                     <b>Better than</b>
                   </Typography>
->>>>>>> master
+
                 </Grid>
               </Grid>
               <hr />
