@@ -17,6 +17,7 @@ export default function PaperCard(props) {
     title = "",
     completed = "",
     future = "",
+    noAction = false,
   } = props;
 
   return (
@@ -56,29 +57,35 @@ export default function PaperCard(props) {
             </Typography>
           </Grid>
         </Grid>
-        <Grid
-          item
-          container
-          direction="row"
-          justifyContent="center"
-          alignItems="center"
-        >
-          <Grid item>
-            <Typography variant="h4">{completed} {future}</Typography>
-          </Grid>
-        </Grid>
-        {buttonLabel !== "" && (
-          <Grid
-            item
-            container
-            direction="row"
-            justifyContent="center"
-            alignItems="center"
-          >
-            <Grid item xs={12}>
-              <ColorButton fullWidth>{buttonLabel}</ColorButton>
+        {!noAction && (
+          <>
+            <Grid
+              item
+              container
+              direction="row"
+              justifyContent="center"
+              alignItems="center"
+            >
+              <Grid item>
+                <Typography variant="h4">
+                  {completed} {future}
+                </Typography>
+              </Grid>
             </Grid>
-          </Grid>
+            {buttonLabel !== "" && (
+              <Grid
+                item
+                container
+                direction="row"
+                justifyContent="center"
+                alignItems="center"
+              >
+                <Grid item xs={12}>
+                  <ColorButton fullWidth>{buttonLabel}</ColorButton>
+                </Grid>
+              </Grid>
+            )}
+          </>
         )}
       </Grid>
     </Paper>
