@@ -3,16 +3,32 @@ import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import { Grid } from "@mui/material";
-import PointsIndex from "../home/PointsIndex";
+import { CardMedia, Grid } from "@mui/material";
 import { useSelector } from "react-redux";
+import traveled from "../../components/img/traveled.jpg";
 
 export default function PastAndFutureTravels({ showPoints = false }) {
   const { pastTravels = [] } = useSelector((state) => state.userTravel);
 
   return (
-    <Grid container item direction="row" spacing={3}>
-    
+    <Grid
+      container
+      item
+      direction="row"
+      spacing={0}
+      sx={{ marginTop: "-2rem" }}
+    >
+      <Grid item xs={12}>
+        <CardMedia
+          component="img"
+          height="256"
+          width="256"
+          image={traveled}
+          alt="Paella dish"
+          sx={{ objectFit: "contain" }}
+        />
+      </Grid>
+
       {/** Tables */}
       <Grid item xs={12}>
         {pastTravels.length > 0 &&
