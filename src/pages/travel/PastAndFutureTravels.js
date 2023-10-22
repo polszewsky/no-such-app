@@ -12,13 +12,7 @@ export default function PastAndFutureTravels({ showPoints = false }) {
 
   return (
     <Grid container item direction="row" spacing={3}>
-      {/** Points Index */}
-      {showPoints && (
-        <Grid item xs>
-          <PointsIndex points={122} label="% emissions" scale={0.7} />
-        </Grid>
-      )}
-
+    
       {/** Tables */}
       <Grid item xs={12}>
         {pastTravels.length > 0 &&
