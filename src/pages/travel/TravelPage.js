@@ -3,9 +3,9 @@ import { Fab, Grid, Tab, Tabs } from "@mui/material";
 import pastTravels from "./PastTravelJSON";
 import PastAndFutureTravels from "./PastAndFutureTravels";
 import FutureTravelsPage from "./future_travels/FutureTravelsPage";
-import NoDataPlaceholder from "../../components/NoDataPlaceholder";
 import { Commute } from "@mui/icons-material";
 import { Link } from "react-router-dom/cjs/react-router-dom";
+import TodayTravels from "./today_travels/TodayTravels";
 
 export default function TravelPage() {
   const [currentTab, setValue] = React.useState(1);
@@ -40,7 +40,7 @@ export default function TravelPage() {
       {currentTab === 0 && (
         <PastAndFutureTravels listOfTravels={pastTravels} showPoints />
       )}
-      {currentTab === 1 && <NoDataPlaceholder label="No Travels" />}
+      {currentTab === 1 && <TodayTravels />}
       {currentTab === 2 && <FutureTravelsPage />}
 
       <Grid item>

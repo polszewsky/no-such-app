@@ -17,15 +17,20 @@ import MyLocationIcon from "@mui/icons-material/MyLocation";
 import { Fragment, useState } from "react";
 import TitleReturnBar from "../../../components/TitleReturnBar";
 import { CalendarIcon } from "@mui/x-date-pickers";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { addUserTodayTravel } from "../../../reducers/userTravelSlice";
+import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 
 export default function AddTravelPage() {
+  const dispatch = useDispatch();
+  const history = useHistory();
+
   const { vehicles } = useSelector((state) => state.userVehicles);
 
   const [start, setstart] = useState("");
   const [end, setend] = useState("");
   const [type, settype] = useState("");
-  const [car, setCar] = useState("");
+  const [car, setCar] = useState(""); //fuel Usage
 
   const handlestartChange = (event) => {
     setstart(event.target.value);
@@ -41,6 +46,19 @@ export default function AddTravelPage() {
 
   const handleCarChange = (event) => {
     setCar(event.target.value);
+  };
+
+  const saveForm = () => {
+    const newTravel = {
+      from: start,
+      to: end,
+      CO2: 12,
+      type: type,
+      date: "22.08.2023",
+    };
+
+    dispatch(addUserTodayTravel(newTravel));
+    history.push("/travel");
   };
 
   return (
@@ -179,6 +197,7 @@ export default function AddTravelPage() {
               startIcon={<CreateIcon />}
               color="primary"
               size="large"
+              onClick={() => saveForm()}
             >
               Save
             </Button>
