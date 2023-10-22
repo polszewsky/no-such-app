@@ -1,9 +1,10 @@
 import { Grid, Paper, Typography } from "@mui/material";
 import React from "react";
 import LastTravelRecord from "./LastTravelRecord";
+import { useSelector } from "react-redux";
 
 export default function LastTravels() {
-  const lastTravels = [{ id: "ID1" }, { id: "ID2" }, { id: "ID3" }];
+  const { pastTravels = [] } = useSelector((state) => state.userTravel);
 
   return (
     <Grid
@@ -29,9 +30,12 @@ export default function LastTravels() {
                 justifyContent="center"
                 alignItems="center"
               >
-                {lastTravels.map((tv, index) => (
-                  <LastTravelRecord travel={tv} key={index} />
-                ))}
+                {pastTravels.length > 0 &&
+                  pastTravels
+                    .slice(0, 3)
+                    .map((r, index) => (
+                      <LastTravelRecord record={r} key={index} />
+                    ))}
               </Grid>
             </Grid>
           </Grid>

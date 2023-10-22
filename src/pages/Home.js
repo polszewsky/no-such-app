@@ -19,7 +19,7 @@ export default function Home() {
       justifyContent="center"
       sx={{ paddingTop: "1rem" }}
     >
-      <PointsIndex points="78" scale={0.8} />
+      <PointsIndex points="78" scale={0.8} label="DAILY INDEX" />
 
       <LastTravels />
 
