@@ -5,9 +5,9 @@ import Typography from "@mui/material/Typography";
 import Fab from "@mui/material/Fab";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import { community } from "../../components/Community";
-import Co2Icon from '@mui/icons-material/Co2';
-import TokenIcon from '@mui/icons-material/Token';
-import PercentIcon from '@mui/icons-material/Percent';
+import Co2Icon from "@mui/icons-material/Co2";
+import TokenIcon from "@mui/icons-material/Token";
+import PercentIcon from "@mui/icons-material/Percent";
 
 export default function CommunityPage() {
   return (
@@ -17,7 +17,10 @@ export default function CommunityPage() {
       alignItems="center"
       justifyContent="center"
     >
+<<<<<<< HEAD
 
+=======
+>>>>>>> 62c608ff8704e52560a1bcbe2a03e3e108047297
       <Grid item container marginTop={2} direction="row">
         <Grid item xs={12}>
           <Card
@@ -62,7 +65,10 @@ export default function CommunityPage() {
                   <Typography variant="h6">
                     <b>Better than</b>
                   </Typography>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 62c608ff8704e52560a1bcbe2a03e3e108047297
                 </Grid>
               </Grid>
               <hr />
@@ -121,7 +127,9 @@ export default function CommunityPage() {
                     color="text.secondary"
                     gutterBottom
                   >
-                    <b>{element.name} {element.surname}</b>
+                    <b>
+                      {element.name} {element.surname}
+                    </b>
                   </Typography>
                 </Grid>
                 <hr />
@@ -136,10 +144,14 @@ export default function CommunityPage() {
                     <Typography sx={{ fontSize: 20 }}>{element.CO2}</Typography>
                   </Grid>
                   <Grid item>
-                    <Typography sx={{ fontSize: 20 }}>{element.points}</Typography>
+                    <Typography sx={{ fontSize: 20 }}>
+                      {element.points}
+                    </Typography>
                   </Grid>
                   <Grid item>
-                    <Typography sx={{ fontSize: 20 }}>{element.betterThan}</Typography>
+                    <Typography sx={{ fontSize: 20 }}>
+                      {element.betterThan}
+                    </Typography>
                   </Grid>
                 </Grid>
               </CardContent>
