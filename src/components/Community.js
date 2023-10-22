@@ -20,6 +20,20 @@ export const community = {
         CO2: "230kg",
         points: 6888,
         betterThan: "39%"
-      }
+      },
+      {
+        name: "Pola",
+        surname: "Milova",
+        CO2: "808kg",
+        points: 409,
+        betterThan: "5%"
+      },
+      {
+        name: "Pola",
+        surname: "Milova",
+        CO2: "709kg",
+        points: 690,
+        betterThan: "20%"
+      },
     ],
   };
