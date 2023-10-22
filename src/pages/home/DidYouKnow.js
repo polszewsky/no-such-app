@@ -13,9 +13,9 @@ export default function DidYouKnow() {
 
   useEffect(() => {
     //RAND 0 to NUMBER OF COLORS/INFO CARDS FROM SLICE
-    const selectedIndex = Math.floor(Math.random() * 3);
+    const selectedIndex = Math.floor(Math.random() * 10);
 
-    setSelectedColor(cardColors[selectedIndex]);
+    setSelectedColor(cardColors[Math.floor(Math.random() * 3)]);
 
     if (infoList && infoList.length > 1) {
       setSelectedInfo(infoList[selectedIndex]);
@@ -57,10 +57,11 @@ export default function DidYouKnow() {
             </Grid>
             <Grid item xs={12} sx={{ marginTop: "1rem" }}>
               <Button
-                variant="text"
+                variant="outlined"
                 onClick={() =>
                   window.location.replace(`${selectedInfo?.url ?? ""}`)
                 }
+                sx={{ color: "black" }}
               >
                 Read more
               </Button>

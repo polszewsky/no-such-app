@@ -15,7 +15,6 @@ export default function ChallengePage() {
     if (reason === "clickaway") {
       return;
     }
-
     setOpenShare(false);
   };
 
@@ -42,7 +41,10 @@ export default function ChallengePage() {
         message="Shared on Facebook - Thanks!"
         sx={{ bottom: "65px" }}
       >
-        <Alert severity="info" sx={{ width: "100%" }}>
+        <Alert
+          severity="info"
+          sx={{ width: "100%", border: "1px solid #4c88c2" }}
+        >
           Shared on Facebook - Thanks!
         </Alert>
       </Snackbar>
