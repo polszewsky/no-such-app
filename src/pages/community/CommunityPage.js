@@ -17,10 +17,6 @@ export default function CommunityPage() {
       alignItems="center"
       justifyContent="center"
     >
-<<<<<<< HEAD
-
-=======
->>>>>>> 62c608ff8704e52560a1bcbe2a03e3e108047297
       <Grid item container marginTop={2} direction="row">
         <Grid item xs={12}>
           <Card
@@ -65,10 +61,6 @@ export default function CommunityPage() {
                   <Typography variant="h6">
                     <b>Better than</b>
                   </Typography>
-<<<<<<< HEAD
-
-=======
->>>>>>> 62c608ff8704e52560a1bcbe2a03e3e108047297
                 </Grid>
               </Grid>
               <hr />
