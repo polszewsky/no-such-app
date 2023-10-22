@@ -49,18 +49,18 @@ export default function LastMonthEmissions() {
   ];
 
   const year = [
-    { x: "1", y: 420 },
-    { x: "2", y: 570 },
-    { x: "3", y: 220 },
-    { x: "4", y: 700 },
-    { x: "5", y: 130 },
-    { x: "6", y: 670 },
-    { x: "7", y: 320 },
-    { x: "8", y: 250 },
-    { x: "9", y: 570 },
-    { x: "10", y: 110 },
-    { x: "11", y: 520 },
-    { x: "12", y: 280 },
+    { x: "Jan", y: 420 },
+    { x: "Feb", y: 570 },
+    { x: "Mar", y: 220 },
+    { x: "Apr", y: 700 },
+    { x: "May", y: 130 },
+    { x: "Jun", y: 670 },
+    { x: "Jul", y: 320 },
+    { x: "Aug", y: 250 },
+    { x: "Sep", y: 570 },
+    { x: "Oct", y: 110 },
+    { x: "Nov", y: 520 },
+    { x: "Dev", y: 280 },
   ];
   const [element, setelement] = useState(30);
   const [jump, setjump] = useState(3);
