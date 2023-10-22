@@ -3,7 +3,7 @@ import {
   Switch,
   useRouteMatch,
 } from "react-router-dom/cjs/react-router-dom";
-import CommunityPage from "./CommunityPage";
+import CommunityTabWrapper from "./CommunityTabWrapper";
 
 export default function CommunityRouter() {
   let match = useRouteMatch();
@@ -11,7 +11,7 @@ export default function CommunityRouter() {
   return (
     <Switch>
       <Route path={`${match.path}`}>
-        <CommunityPage />
+        <CommunityTabWrapper />
       </Route>
     </Switch>
   );
