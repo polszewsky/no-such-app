@@ -21,8 +21,6 @@ import PointsIndex from "../home/PointsIndex";
 import CreditScoreIcon from "@mui/icons-material/CreditScore";
 import CheckroomIcon from "@mui/icons-material/Checkroom";
 import SportsScoreIcon from "@mui/icons-material/SportsScore";
-import CheckBoxIcon from "@mui/icons-material/CheckBox";
-import DisabledByDefaultIcon from "@mui/icons-material/DisabledByDefault";
 
 export default function RewardsPage() {
   let match = useRouteMatch();
