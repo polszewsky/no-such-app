@@ -20,9 +20,9 @@ const StyledCircle = styled("span")(({ scale = 1.0, color }) => ({
   /* center all content vertically */
   justifyContent: "center",
 
-  webkitBoxShadow: "4px 4px 63px -8px rgba(37,78,90, 1)",
-  mozBoxShadow: "4px 4px 63px -8px rgba(37,78,90, 1)",
-  boxShadow: "4px 4px 63px -8px rgba(37,78,90, 1)",
+  webkitBoxShadow: `4px 4px 63px -8px ${color}`,
+  mozBoxShadow: `4px 4px 63px -8px ${color}`,
+  boxShadow: `4px 4px 63px -8px ${color}`,
 }));
 
 export default function PointsIndex({

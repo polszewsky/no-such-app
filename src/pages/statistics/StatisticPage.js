@@ -1,8 +1,16 @@
-import { Grid, Typography } from "@mui/material";
+import { Grid, Tab, Tabs } from "@mui/material";
 import CarsStats from "./CarsStats";
 import LastMonthEmissions from "./LastMonthEmissions";
+import React from "react";
+import HomeStatistics from "./HomeStatistics";
 
 export default function StatisticPage() {
+  const [currentTab, setValue] = React.useState(0);
+
+  const handleChange = (_event, newValue) => {
+    setValue(newValue);
+  };
+
   return (
     <Grid
       container
@@ -10,14 +18,28 @@ export default function StatisticPage() {
       direction="column"
       alignItems="center"
       justifyContent="center"
-      sx={{ paddingTop: "1rem" }}
     >
-      <Grid item>
-        <Typography variant="h2">Statistics</Typography>
+      <Grid container item direction="row">
+        <Grid item xs={12}>
+          <Tabs
+            value={currentTab}
+            onChange={handleChange}
+            centered
+            variant="fullWidth"
+          >
+            <Tab value={0} label="Travel" />
+            <Tab value={1} label="Home" />
+          </Tabs>
+        </Grid>
       </Grid>
 
-      <CarsStats />
-      <LastMonthEmissions />
+      {currentTab === 0 && (
+        <>
+          <CarsStats />
+          <LastMonthEmissions />
+        </>
+      )}
+      {currentTab === 1 && <HomeStatistics />}
     </Grid>
   );
 }
