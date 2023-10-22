@@ -41,6 +41,27 @@ export default function RewardsPage() {
       sx={{ padding: "1rem" }}
     >
       <Grid container direction="row" alignItems="center">
+        <Grid item xs={12} sx={{ marginTop: "0.5rem" }}>
+          <PaperCard
+            noAction
+            actionOnClick={() => history.push("/challenges")}
+            color="blue"
+            title={
+              <>
+                See&nbsp;&nbsp;&nbsp;Challenges&nbsp;&nbsp;
+                <NavigateNextIcon color="green" />
+              </>
+            }
+          />
+        </Grid>
+      </Grid>
+
+      <Grid
+        container
+        direction="row"
+        alignItems="center"
+        sx={{ marginTop: "1rem" }}
+      >
         <Grid item xs={12}>
           <PointsIndex points="212" label="tokens" scale={0.8} />
         </Grid>
@@ -280,19 +301,6 @@ export default function RewardsPage() {
             future={[...Array(7)].map((element) => (
               <DisabledByDefaultIcon style={{ fill: "white" }} />
             ))}
-          />
-        </Grid>
-
-        <Grid item xs={12} sx={{ marginTop: "1rem" }}>
-          <PaperCard
-            actionOnClick={() => history.push("/challenges")}
-            color="blue"
-            title={
-              <>
-                Discover challenges
-                <NavigateNextIcon color="green" />
-              </>
-            }
           />
         </Grid>
       </Grid>

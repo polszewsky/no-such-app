@@ -3,6 +3,7 @@ import CarsStats from "./CarsStats";
 import LastMonthEmissions from "./LastMonthEmissions";
 import React from "react";
 import HomeStatistics from "./HomeStatistics";
+import PlantedTreesStatistics from "./PlantedTreesStatistics";
 
 export default function StatisticPage() {
   const [currentTab, setValue] = React.useState(0);
@@ -37,6 +38,7 @@ export default function StatisticPage() {
         <>
           <CarsStats />
           <LastMonthEmissions />
+          <PlantedTreesStatistics />
         </>
       )}
       {currentTab === 1 && <HomeStatistics />}

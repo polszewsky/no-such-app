@@ -1,6 +1,7 @@
 const pastTravels = {
   travels: [
     {
+      id: 1,
       from: "Cracow",
       to: "Warsaw",
       CO2: 122,
@@ -8,6 +9,7 @@ const pastTravels = {
       date: "12.12.2022",
     },
     {
+      id: 2,
       from: "Berlin",
       to: "London",
       CO2: 437,
@@ -15,13 +17,7 @@ const pastTravels = {
       date: "12.10.2022",
     },
     {
-      from: "Lisbon",
-      to: "Kyiv",
-      CO2: 1579,
-      type: "plane",
-      date: "01.01.2023",
-    },
-    {
+      id: 3,
       from: "Cairo",
       to: "Rome",
       CO2: 1408,
@@ -29,6 +25,15 @@ const pastTravels = {
       date: "13.05.2023",
     },
     {
+      id: 4,
+      from: "Lisbon",
+      to: "Kyiv",
+      CO2: 1579,
+      type: "plane",
+      date: "01.01.2023",
+    },
+    {
+      id: 5,
       from: "Hamburg",
       to: "Hague",
       CO2: 12,

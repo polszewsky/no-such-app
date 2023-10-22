@@ -1,6 +1,5 @@
 import * as React from "react";
 import { Fab, Grid, Tab, Tabs } from "@mui/material";
-import pastTravels from "./PastTravelJSON";
 import PastAndFutureTravels from "./PastAndFutureTravels";
 import FutureTravelsPage from "./future_travels/FutureTravelsPage";
 import { Commute } from "@mui/icons-material";
@@ -37,9 +36,7 @@ export default function TravelPage() {
         </Grid>
       </Grid>
 
-      {currentTab === 0 && (
-        <PastAndFutureTravels listOfTravels={pastTravels} showPoints />
-      )}
+      {currentTab === 0 && <PastAndFutureTravels showPoints />}
       {currentTab === 1 && <TodayTravels />}
       {currentTab === 2 && <FutureTravelsPage />}
 
