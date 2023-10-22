@@ -61,6 +61,29 @@ export default function AddTravelPage() {
     history.push("/travel");
   };
 
+  const saveAndNavigate = () => {
+    const newTravel = {
+      from: start,
+      to: end,
+      CO2: 12,
+      type: type,
+      date: "22.08.2023",
+    };
+
+    dispatch(addUserTodayTravel(newTravel));
+
+    history.push("/travel");
+
+    window.open(
+      "https://www.google.com/maps/dir/?api=1&origin=" +
+        start +
+        "&destination=" +
+        end +
+        "&travelmode=" +
+        type
+    );
+  };
+
   return (
     <Fragment>
       <TitleReturnBar site="Add Travel" />
@@ -210,16 +233,7 @@ export default function AddTravelPage() {
               color="primary"
               size="large"
               // onClick={(() => window.open("https://www.google.com/maps?f=d&saddr=" + start + "&daddr=" + end + "&dirflg=d"))}
-              onClick={() =>
-                window.open(
-                  "https://www.google.com/maps/dir/?api=1&origin=" +
-                    start +
-                    "&destination=" +
-                    end +
-                    "&travelmode=" +
-                    type
-                )
-              }
+              onClick={() => saveAndNavigate()}
             >
               Save and navigate
             </Button>
