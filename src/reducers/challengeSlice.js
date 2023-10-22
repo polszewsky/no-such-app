@@ -3,6 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 export const challengeSlice = createSlice({
   name: "challenge",
   initialState: {
+    monthly: 5,
     challenges: [
       {
         id: 1,
@@ -41,6 +42,8 @@ export const challengeSlice = createSlice({
       state.challenges = state.challenges.map((record) =>
         record.id === action.payload.id ? { ...record, taken: true } : record
       );
+
+      state.monthly = state.monthly + 1;
     },
   },
 });
