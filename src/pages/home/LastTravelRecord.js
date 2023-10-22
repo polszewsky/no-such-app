@@ -38,7 +38,7 @@ export default function LastTravelRecord({ record = {} }) {
         </Typography>
       </Grid>
       <Grid item>{record?.date}</Grid>
-      <Grid item>{record?.CO2} CO₂</Grid>
+      <Grid item>{record?.CO2} CO₂ kg</Grid>
       <Grid item>
         <ArrowRight />
       </Grid>
