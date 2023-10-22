@@ -1,4 +1,5 @@
 import {
+  Add,
   DeleteForever,
   DirectionsCar,
   ElectricCar,
@@ -12,6 +13,7 @@ import {
   Button,
   CardMedia,
   CircularProgress,
+  Fab,
   Grid,
   Typography,
 } from "@mui/material";
@@ -163,6 +165,20 @@ export default function VehiclesPage() {
           </Grid>
         </Grid>
       </ChildrenALessDialog>
+
+      <Grid item>
+        <Fab
+          color="primary"
+          aria-label="add"
+          sx={{
+            position: "fixed",
+            bottom: (theme) => theme.spacing(9),
+            right: (theme) => theme.spacing(2),
+          }}
+        >
+          <Add style={{ fontSize: 42 }} />
+        </Fab>
+      </Grid>
     </Grid>
   );
 }
