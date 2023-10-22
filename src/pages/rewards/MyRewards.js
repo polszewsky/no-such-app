@@ -110,7 +110,7 @@ export default function MyRewards() {
                     alignItems="center"
                   >
                     <Grid item>
-                      <Typography variant="h4">$1 Off Card</Typography>{" "}
+                      <Typography variant="h4">$1 Discount</Typography>{" "}
                     </Grid>
                     <Grid item>
                       <Chip label="waiting" icon={<AccessTime />} />

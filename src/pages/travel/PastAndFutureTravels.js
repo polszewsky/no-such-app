@@ -10,13 +10,30 @@ import TrainIcon from '@mui/icons-material/Train';
 import PedalBikeIcon from '@mui/icons-material/PedalBike';
 import AirplanemodeActiveIcon from '@mui/icons-material/AirplanemodeActive';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
+import traveled from "../../components/img/traveled.jpg";
 
 export default function PastAndFutureTravels({ showPoints = false }) {
   const { pastTravels = [] } = useSelector((state) => state.userTravel);
 
   return (
-    <Grid container item direction="row" spacing={3}>
-    
+    <Grid
+      container
+      item
+      direction="row"
+      spacing={0}
+      sx={{ marginTop: "-2rem" }}
+    >
+      <Grid item xs={12}>
+        <CardMedia
+          component="img"
+          height="256"
+          width="256"
+          image={traveled}
+          alt="Paella dish"
+          sx={{ objectFit: "contain" }}
+        />
+      </Grid>
+
       {/** Tables */}
       <Grid item xs={12}>
         {pastTravels.length > 0 &&

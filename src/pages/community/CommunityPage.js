@@ -5,9 +5,6 @@ import Typography from "@mui/material/Typography";
 import Fab from "@mui/material/Fab";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import { community } from "../../components/Community";
-import Co2Icon from '@mui/icons-material/Co2';
-import TokenIcon from '@mui/icons-material/Token';
-import PercentIcon from '@mui/icons-material/Percent';
 
 export default function CommunityPage() {
   return (

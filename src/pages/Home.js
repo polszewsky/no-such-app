@@ -19,7 +19,39 @@ export default function Home() {
       justifyContent="center"
       sx={{ paddingTop: "1rem" }}
     >
-      <PointsIndex points="78" scale={0.8} label="DAILY INDEX" />
+      <Grid container item direction="row" spacing={3}>
+        {/** Points Index */}
+
+        <Grid item xs={12}>
+          <Grid
+            container
+            item
+            direction="row"
+            alignItems="flex-end"
+            justifyContent="center"
+          >
+            <Grid item>
+              <PointsIndex points={450} label="CarbonToken" scale={0.6} />
+            </Grid>
+            <Grid item>
+              <PointsIndex
+                points={27}
+                label="CO2 reduce possible"
+                scale={0.7}
+                color="#56B896"
+              />
+            </Grid>
+            <Grid item>
+              <PointsIndex
+                points={38}
+                label="CO2 kg today"
+                scale={0.5}
+                color="#FF3232"
+              />
+            </Grid>
+          </Grid>
+        </Grid>
+      </Grid>
 
       <LastTravels />
 
