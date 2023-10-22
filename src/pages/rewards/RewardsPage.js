@@ -47,8 +47,29 @@ export default function RewardsPage() {
             actionOnClick={() => history.push("/challenges")}
             color="blue"
             title={
-              <>
+              <span style={{ color: "#fedf33" }}>
                 See&nbsp;&nbsp;&nbsp;Challenges&nbsp;&nbsp;
+                <NavigateNextIcon color="green" />
+              </span>
+            }
+          />
+        </Grid>
+      </Grid>
+
+      <Grid
+        container
+        direction="row"
+        alignItems="center"
+        sx={{ marginTop: "1rem" }}
+      >
+        <Grid item xs={12}>
+          <PaperCard
+            actionOnClick={handleOnClick}
+            color="blue"
+            noAction
+            title={
+              <>
+                My&nbsp;&nbsp;&nbsp;rewards&nbsp;&nbsp;
                 <NavigateNextIcon color="green" />
               </>
             }
@@ -278,31 +299,6 @@ export default function RewardsPage() {
 
           {/** // end */}
         </Timeline>
-      </Grid>
-      <Grid
-        container
-        direction="row"
-        alignItems="center"
-        sx={{ marginTop: "1rem" }}
-      >
-        <Grid item xs={12}>
-          <PaperCard
-            actionOnClick={handleOnClick}
-            color="blue"
-            title={
-              <>
-                My&nbsp;&nbsp;&nbsp;rewards&nbsp;&nbsp;
-                <NavigateNextIcon color="green" />
-              </>
-            }
-            completed={[...Array(3)].map((element) => (
-              <CheckBoxIcon style={{ fill: "white" }} />
-            ))}
-            future={[...Array(7)].map((element) => (
-              <DisabledByDefaultIcon style={{ fill: "white" }} />
-            ))}
-          />
-        </Grid>
       </Grid>
     </Grid>
   );
