@@ -55,9 +55,25 @@ export default function Login() {
             direction="row"
             justifyContent="center"
             alignItems="center"
+            sx={{ marginTop: "-1rem" }}
           >
             <Grid item xs={10}>
-              <Typography variant="h2">No Such App Exception</Typography>
+              <Typography
+                variant="h2"
+                sx={{ fontWeight: 500, color: "#074548" }}
+              >
+                <span style={{ fontSize: "48pt" }}>e</span>CO
+                <span style={{ fontSize: "21pt", fontWeight: 500 }}>
+                  2
+                </span>{" "}
+                <span style={{ fontSize: "36pt" }}>LIFE</span>
+              </Typography>
+            </Grid>
+
+            <Grid item xs={10}>
+              <Typography variant="h2" sx={{ fontSize: "8pt", color: "#888" }}>
+                Created By <b>NoSuchAppException</b>
+              </Typography>
             </Grid>
           </Grid>
           <Grid
