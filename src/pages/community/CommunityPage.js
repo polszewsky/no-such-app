@@ -5,9 +5,9 @@ import Typography from "@mui/material/Typography";
 import Fab from "@mui/material/Fab";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import { community } from "../../components/Community";
-import Co2Icon from "@mui/icons-material/Co2";
-import TokenIcon from "@mui/icons-material/Token";
-import PercentIcon from "@mui/icons-material/Percent";
+import Co2Icon from '@mui/icons-material/Co2';
+import TokenIcon from '@mui/icons-material/Token';
+import PercentIcon from '@mui/icons-material/Percent';
 
 export default function CommunityPage() {
   return (
@@ -119,9 +119,7 @@ export default function CommunityPage() {
                     color="text.secondary"
                     gutterBottom
                   >
-                    <b>
-                      {element.name} {element.surname}
-                    </b>
+                    <b>{element.name} {element.surname}</b>
                   </Typography>
                 </Grid>
                 <hr />
@@ -136,14 +134,10 @@ export default function CommunityPage() {
                     <Typography sx={{ fontSize: 20 }}>{element.CO2}</Typography>
                   </Grid>
                   <Grid item>
-                    <Typography sx={{ fontSize: 20 }}>
-                      {element.points}
-                    </Typography>
+                    <Typography sx={{ fontSize: 20 }}>{element.points}</Typography>
                   </Grid>
                   <Grid item>
-                    <Typography sx={{ fontSize: 20 }}>
-                      {element.betterThan}
-                    </Typography>
+                    <Typography sx={{ fontSize: 20 }}>{element.betterThan}</Typography>
                   </Grid>
                 </Grid>
               </CardContent>
