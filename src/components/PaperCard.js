@@ -18,13 +18,14 @@ export default function PaperCard(props) {
     completed = "",
     future = "",
     noAction = false,
+    background = "#2f6271",
   } = props;
 
   return (
     <Paper
       sx={{
         padding: "1rem",
-        background: "#2f6271",
+        background: background,
       }}
       onClick={actionOnClick}
     >

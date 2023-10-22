@@ -5,8 +5,13 @@ import Typography from "@mui/material/Typography";
 import Fab from "@mui/material/Fab";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import { community } from "../../components/Community";
+import PaperCard from "../../components/PaperCard";
+import { NavigateNext } from "@mui/icons-material";
+import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 
 export default function CommunityPage() {
+  let history = useHistory();
+
   return (
     <Grid
       container
@@ -83,6 +88,22 @@ export default function CommunityPage() {
         </Grid>
       </Grid>
 
+      <Grid container direction="row" alignItems="center">
+        <Grid item xs={12} sx={{ marginTop: "0.5rem" }}>
+          <PaperCard
+            background="#fff"
+            noAction
+            actionOnClick={() => history.push("/community/voting")}
+            title={
+              <span style={{ color: "#56B896" }}>
+                VOTING&nbsp;&nbsp;
+                <NavigateNext color="green" />
+              </span>
+            }
+          />
+        </Grid>
+      </Grid>
+
       <Grid
         container
         item
@@ -116,7 +137,9 @@ export default function CommunityPage() {
                     color="text.secondary"
                     gutterBottom
                   >
-                    <b>{element.name} {element.surname}</b>
+                    <b>
+                      {element.name} {element.surname}
+                    </b>
                   </Typography>
                 </Grid>
                 <hr />
@@ -131,10 +154,14 @@ export default function CommunityPage() {
                     <Typography sx={{ fontSize: 20 }}>{element.CO2}</Typography>
                   </Grid>
                   <Grid item>
-                    <Typography sx={{ fontSize: 20 }}>{element.points}</Typography>
+                    <Typography sx={{ fontSize: 20 }}>
+                      {element.points}
+                    </Typography>
                   </Grid>
                   <Grid item>
-                    <Typography sx={{ fontSize: 20 }}>{element.betterThan}</Typography>
+                    <Typography sx={{ fontSize: 20 }}>
+                      {element.betterThan}
+                    </Typography>
                   </Grid>
                 </Grid>
               </CardContent>
