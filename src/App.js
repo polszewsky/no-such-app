@@ -92,7 +92,17 @@ export default function App() {
               color: "#BEBFC1",
             }}
           />
-
+          
+          <BottomNavigationAction
+            component={Link}
+            to="/vehicles"
+            label="Vehicles"
+            icon={<Garage />}
+            sx={{
+              color: "#BEBFC1",
+            }}
+          />
+          
           <BottomNavigationAction
             component={Link}
             to="/statistic"
@@ -103,17 +113,7 @@ export default function App() {
             }}
           />
 
-          
-
-          <BottomNavigationAction
-            component={Link}
-            to="/vehicles"
-            label="Vehicles"
-            icon={<Garage />}
-            sx={{
-              color: "#BEBFC1",
-            }}
-          />
+        
 
           <BottomNavigationAction
             component={Link}
