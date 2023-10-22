@@ -1,3 +1,9 @@
+import image1 from "../../components/img/WWkrk.png"
+import image2 from "../../components/img/BerlinLondon.png"
+import image3 from "../../components/img/CairRome.png"
+import image4 from "../../components/img/lisbonbuk.png"
+import image5 from "../../components/img/hamhague.png"
+
 const pastTravels = {
   travels: [
     {
@@ -8,6 +14,7 @@ const pastTravels = {
       type: "train",
       date: "12.12.2022",
       distance: 250,
+      image: image1
     },
     {
       id: 2,
@@ -17,6 +24,7 @@ const pastTravels = {
       type: "plane",
       date: "12.10.2022",
       distance: 980,
+      image: image2
     },
     {
       id: 3,
@@ -26,15 +34,17 @@ const pastTravels = {
       type: "plane",
       date: "13.05.2023",
       distance: 1800,
+      image: image3
     },
     {
       id: 4,
       from: "Lisbon",
-      to: "Kyiv",
+      to: "Bukarest",
       CO2: 1579,
       type: "plane",
       date: "01.01.2023",
       distance: 2370,
+      image: image4
     },
     {
       id: 5,
@@ -44,6 +54,7 @@ const pastTravels = {
       type: "bike",
       date: "21.08.2023",
       distance: 870,
+      image: image5
     },
   ],
 };

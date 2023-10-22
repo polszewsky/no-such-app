@@ -36,9 +36,10 @@ export default function StatisticPage() {
 
       {currentTab === 0 && (
         <>
-          <CarsStats />
           <LastMonthEmissions />
           <PlantedTreesStatistics />
+          <CarsStats />
+          
         </>
       )}
       {currentTab === 1 && <HomeStatistics />}
