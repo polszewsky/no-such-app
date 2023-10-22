@@ -2,10 +2,12 @@ import React from "react";
 import { Fragment } from "react";
 import { useParams } from "react-router-dom";
 import TitleReturnBar from "../../../components/TitleReturnBar";
-import { Grid } from "@mui/material";
+import { Button, CardMedia, Grid, Typography } from "@mui/material";
 import { useSelector } from "react-redux";
 import { useState } from "react";
 import { useEffect } from "react";
+import map from "../../../components/img/map_small.jpg";
+import { FacebookIcon } from "../../../components/img/FacebookIcon";
 
 export default function TravelDetails() {
   let { travelId } = useParams();
@@ -16,31 +18,83 @@ export default function TravelDetails() {
 
   useEffect(() => {
     if (travelId) {
-      const filteredTravel = pastTravels.filter((t) => t.id === travelId);
+      const filteredTravel = pastTravels.find(
+        (t) => Number(t.id) === Number(travelId)
+      );
+
       setSelectedTravel(filteredTravel);
     }
   }, [travelId, pastTravels]);
-
-  const url =
-    "https://www.google.com/maps/dir/Łódź/Sofia,+Wierzbińska+66,+95-070+Aleksandrów+Łódzki/@51.7758347,19.371299,12z/data=!4m8!4m7!1m2!1m1!1s0x471bcb24754556af:0xcb7cae639b21dbac!1m2!1m1!1s0x471bb366f5e4515f:0x787518eaa2f73db5!3e0&output=embed";
 
   return (
     <Fragment>
       <TitleReturnBar site="Travel Details" />
 
       <Grid container direction="column">
-        <Grid container item direction="row">
-          <iframe
-            title="googleMap"
-            src={url}
-            width="600"
-            height="450"
-            frameborder="0"
-            style={{ border: 0 }}
-            allowfullscreen=""
-            aria-hidden="false"
-            tabindex="0"
-          ></iframe>
+        <Grid container item direction="row" spacing={2}>
+          <Grid item xs={12} sx={{ marginTop: "0.5rem" }}>
+            <CardMedia
+              component="img"
+              image={map}
+              alt="Paella dish"
+              sx={{ objectFit: "contain" }}
+            />
+          </Grid>
+          <Grid item xs={12}>
+            <Typography>
+              <b>From</b>: {selectedTravel?.from}{" "}
+            </Typography>
+          </Grid>
+          <Grid item xs={12}>
+            <Typography>
+              <b>To</b>: {selectedTravel?.to}{" "}
+            </Typography>
+          </Grid>
+          <Grid item xs={12}>
+            <Typography>
+              <b>Date</b>: {selectedTravel?.date}{" "}
+            </Typography>
+          </Grid>
+          <Grid item xs={12}>
+            <Typography>
+              <b>Time</b>: 13:45{" "}
+            </Typography>
+          </Grid>
+          <Grid item xs={12}>
+            <Typography>
+              <b>Distance</b>: {selectedTravel?.distance} km{" "}
+            </Typography>
+          </Grid>
+          <Grid item xs={12}>
+            <Typography>
+              <b>Mode of transport</b>: {selectedTravel?.type}
+            </Typography>
+          </Grid>
+          <Grid item xs={12}>
+            <Typography>
+              <b>Fuel type</b>: benzine
+            </Typography>
+          </Grid>
+          <Grid item xs={12}>
+            <Typography>
+              <b>Average speed</b>: 45kmh
+            </Typography>
+          </Grid>
+          <Grid item xs={12}>
+            <Typography>
+              <b>Carbon emission</b>: {selectedTravel?.CO2} kg
+            </Typography>
+          </Grid>
+
+          <Grid item xs={12}>
+            <Button
+              startIcon={<FacebookIcon />}
+              variant="contained"
+              color="primary"
+            >
+              Share on Facebook
+            </Button>
+          </Grid>
         </Grid>
       </Grid>
     </Fragment>

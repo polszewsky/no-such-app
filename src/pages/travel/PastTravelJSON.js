@@ -7,6 +7,7 @@ const pastTravels = {
       CO2: 122,
       type: "train",
       date: "12.12.2022",
+      distance: 250,
     },
     {
       id: 2,
@@ -15,6 +16,7 @@ const pastTravels = {
       CO2: 437,
       type: "plane",
       date: "12.10.2022",
+      distance: 980,
     },
     {
       id: 3,
@@ -23,6 +25,7 @@ const pastTravels = {
       CO2: 1408,
       type: "plane",
       date: "13.05.2023",
+      distance: 1800,
     },
     {
       id: 4,
@@ -31,6 +34,7 @@ const pastTravels = {
       CO2: 1579,
       type: "plane",
       date: "01.01.2023",
+      distance: 2370,
     },
     {
       id: 5,
@@ -39,6 +43,7 @@ const pastTravels = {
       CO2: 12,
       type: "bike",
       date: "21.08.2023",
+      distance: 870,
     },
   ],
 };
