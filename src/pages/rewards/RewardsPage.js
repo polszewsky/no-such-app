@@ -289,7 +289,7 @@ export default function RewardsPage() {
             color="blue"
             title={
               <>
-                See&nbsp;&nbsp;&nbsp;Challenges&nbsp;&nbsp;
+                Discover challenges
                 <NavigateNextIcon color="green" />
               </>
             }

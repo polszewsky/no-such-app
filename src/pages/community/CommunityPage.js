@@ -6,6 +6,9 @@ import Fab from "@mui/material/Fab";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import image from "../../components/img/community.png";
 import { community } from "../../components/Community";
+import Co2Icon from '@mui/icons-material/Co2';
+import TokenIcon from '@mui/icons-material/Token';
+import PercentIcon from '@mui/icons-material/Percent';
 
 export default function CommunityPage() {
   return (
@@ -26,9 +29,9 @@ export default function CommunityPage() {
           sx={{ objectFit: "contain", paddingTop: "1rem" }}
         />
       </Grid>
-      <Grid item container spacint={2} marginTop={2} direction="row">
+      <Grid item container spacint={2} marginTop={2} >
         <Grid item xs={12}>
-        <Card elevation={3} sx={{ minWidth: 300, marginTop: 2 }}>
+        <Card elevation={3} sx={{ minWidth: 300, marginTop: 2, bgcolor: "#42a5f5" }}>
               <CardContent>
                 <Grid
                   container
@@ -38,7 +41,7 @@ export default function CommunityPage() {
                   alignItems="center"
                 >
                   <Typography
-                    sx={{ fontSize: 20 }}
+                    sx={{ fontSize: 25 }}
                     color="text.secondary"
                     gutterBottom
                   >
@@ -47,7 +50,6 @@ export default function CommunityPage() {
                 </Grid>
                 <Grid
                   container
-                  item
                   direction="row"
                   justifyContent="space-around"
                   alignItems="center"
@@ -65,19 +67,18 @@ export default function CommunityPage() {
                <hr/>
                 <Grid
                   container
-                  item
                   direction="row"
                   justifyContent="space-around"
                   alignItems="center"
                 >
                   <Grid item>
-                    <Typography variant="h6">157</Typography>
+                    <Typography sx={{ fontSize: 20 }} >157</Typography>
                   </Grid>
                   <Grid item>
-                    <Typography variant="h6">5069</Typography>
+                    <Typography sx={{ fontSize: 20 }}>5069</Typography>
                   </Grid>
                   <Grid item>
-                    <Typography variant="h6">72%</Typography>
+                    <Typography sx={{ fontSize: 20 }}>72%</Typography>
                   </Grid>
                 </Grid>
               </CardContent>
@@ -103,11 +104,11 @@ export default function CommunityPage() {
                     sx={{ width: 56, height: 56 }}
                   />
                   <Typography
-                    sx={{ fontSize: 20 }}
+                    sx={{ fontSize: 22 }}
                     color="text.secondary"
                     gutterBottom
                   >
-                    {element.name} {element.surname}
+                    <b>{element.name} {element.surname}</b>
                   </Typography>
                 </Grid>
                 <hr />
@@ -119,13 +120,13 @@ export default function CommunityPage() {
                   alignItems="center"
                 >
                   <Grid item>
-                    <Typography variant="h6">{element.CO2}</Typography>
+                    <Typography sx={{ fontSize: 20 }}>{element.CO2}</Typography>
                   </Grid>
                   <Grid item>
-                    <Typography variant="h6">{element.points}</Typography>
+                    <Typography sx={{ fontSize: 20 }}>{element.points}</Typography>
                   </Grid>
                   <Grid item>
-                    <Typography variant="h6">{element.betterThan}</Typography>
+                    <Typography sx={{ fontSize: 20 }}>{element.betterThan}</Typography>
                   </Grid>
                 </Grid>
               </CardContent>
